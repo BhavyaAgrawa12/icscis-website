@@ -68,24 +68,23 @@
       <div class="flex justify-between items-center py-3">
 
         <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
-          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
-          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+          <li><a href="index.html" class="hover:text-primary">Home</a></li>
+          <li><a href="about.html" class="hover:text-primary">About</a></li>
+          <li><a href="call-for-papers.html" class="hover:text-primary">Call for Papers</a></li>
+          <li><a href="submission.html" class="hover:text-primary">Submission</a></li>
+          <li><a href="publications.html" class="text-primary font-semibold">Publications</a></li>
+          <li><a href="registration.html" class="hover:text-primary">Registrations</a></li>
+          <li><a href="downloads.html" class="hover:text-primary">Downloads</a></li>
+          <li><a href="committee.html" class="hover:text-primary">Committee</a></li>
+          <li><a href="partners.html" class="hover:text-primary">Partners</a></li>
+          <li><a href="speakers.html" class="hover:text-primary">Speakers</a></li>
+          <li><a href="sponsorship.html" class="hover:text-primary">Sponsorship</a></li>
+          <li><a href="special-sessions.html" class="hover:text-primary">Special Sessions</a></li>
+          <li><a href="venue.html" class="hover:text-primary">Venue</a></li>
+          <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
         </ul>
 
         <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-
       </div>
 
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
@@ -93,7 +92,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html">Submission</a></li>
+          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="registration.html">Registrations</a></li>
           <li><a href="downloads.html">Downloads</a></li>
@@ -114,7 +113,7 @@
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- ===== HEADER (Simple Clean Version) ===== -->
+
 
 
 
@@ -249,7 +248,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { threshold: 0.15 });
 
   sections.forEach(section => observer.observe(section));
+})
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", function () {
+  mobileMenu.classList.toggle("hidden");
 });
+
 </script>
  <!-- ================= FOOTER ================= -->
 <footer class="bg-gradient-to-r from-[#0b1e6b] to-[#08134a] text-white pt-16 pb-8">
