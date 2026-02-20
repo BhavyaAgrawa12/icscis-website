@@ -7,70 +7,77 @@
 <link href="assets/css/output.css" rel="stylesheet">
 
 <style>
-.card-hover {
-  transition: all 0.3s ease;
-}
-.card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-.fade-up {
-  animation: fadeUp 0.6s ease forwards;
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+.card-hover{transition:all .3s ease}
+.card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.fade-up{animation:fadeUp .6s ease forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 
 <body class="bg-white text-gray-800">
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
-<nav class="border-b border-gray-200">
-<div class="max-w-7xl mx-auto px-4">
-<div class="flex justify-between items-center py-4">
+<!-- ================= HEADER TOP BAR ================= -->
+<header class="bg-white shadow-sm sticky top-0 z-50 hero-animate">
 
-<ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-<li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-<li><a href="about.html" class="hover:text-primary transition">About</a></li>
-<li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-<li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
-<li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
-<li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
-<li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
-<li><a href="committee.html" class="text-primary font-semibold">Committee</a></li>
-<li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
-<li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
-<li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
-<li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
-<li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
-<li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
-</ul>
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 
-<button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-</div>
+    <div class="flex items-center gap-4">
+      <img src="assets/images/PU_Logo.png" alt="Poornima University" class="h-12 transition-transform duration-500 hover:scale-105">
+    </div>
 
-<div id="mobileMenu" class="hidden lg:hidden pb-4">
-<ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="call-for-papers.html">Call for Papers</a></li>
-<li><a href="submission.html">Submission</a></li>
-<li><a href="publications.html">Publications</a></li>
-<li><a href="registration.html">Registrations</a></li>
-<li><a href="downloads.html">Downloads</a></li>
-<li><a href="committee.html" class="text-primary font-semibold">Committee</a></li>
-<li><a href="partners.html">Partners</a></li>
-<li><a href="speakers.html">Speakers</a></li>
-<li><a href="sponsorship.html">Sponsorship</a></li>
-<li><a href="special-sessions.html">Special Sessions</a></li>
-<li><a href="venue.html">Venue</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-</div>
-</nav>
+    <div class="hidden md:flex gap-6 text-sm font-semibold">
+      <a href="#" class="text-primary hover:underline">AIP Conference Proceedings</a>
+      <a href="#" class="text-primary hover:underline">Scopus Indexed</a>
+    </div>
+
+  </div>
+
+  <nav class="border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+
+        <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
+          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
+          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
+          <li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
+          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
+          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
+          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
+          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
+          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
+          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
+          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
+          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
+          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
+          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+        </ul>
+
+        <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
+
+      </div>
+
+      <div id="mobileMenu" class="hidden lg:hidden pb-4">
+        <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="call-for-papers.html">Call for Papers</a></li>
+          <li><a href="submission.html">Submission</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="registration.html">Registrations</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="committee.html">Committee</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="sponsorship.html">Sponsorship</a></li>
+          <li><a href="special-sessions.html">Special Sessions</a></li>
+          <li><a href="venue.html">Venue</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
 </header>
 
 <section class="py-20 bg-gradient-to-r from-slate-900 to-indigo-900 text-white text-center">
@@ -82,7 +89,7 @@
 
 <section class="py-20 bg-slate-50">
 <div class="max-w-7xl mx-auto px-6 space-y-16">
-
+    <!-- HONORARY PATRON -->
 <div class="fade-up">
 <h2 class="text-2xl font-bold mb-6 text-slate-800">HONORARY PATRON</h2>
 <div class="grid md:grid-cols-3 gap-6">
@@ -92,6 +99,7 @@
 </div>
 </div>
 
+<!-- ADVISORS -->
 <div class="fade-up">
 <h2 class="text-2xl font-bold mb-6 text-slate-800">ADVISORS</h2>
 <div class="grid md:grid-cols-3 gap-6">
@@ -104,16 +112,19 @@
 </div>
 </div>
 
+<!-- CONFERENCE CHAIRS -->
 <div class="fade-up">
 <h2 class="text-2xl font-bold mb-6 text-slate-800">CONFERENCE CHAIRS</h2>
 <div class="bg-white p-6 rounded-xl border card-hover">Dr. Ajay Khuteta</div>
 </div>
 
+<!-- CONFERENCE Co-CHAIRS -->
 <div class="fade-up">
 <h2 class="text-2xl font-bold mb-6 text-slate-800">CONFERENCE Co-CHAIRS</h2>
 <div class="bg-white p-6 rounded-xl border card-hover">Dr. Shikha Sharma</div>
 </div>
 
+<!-- CONVENER -->
 <div class="fade-up">
 <h2 class="text-2xl font-bold mb-6 text-slate-800">CONVENER</h2>
 <div class="grid md:grid-cols-2 gap-6">
@@ -122,6 +133,7 @@
 </div>
 </div>
 
+<!-- CO-CONVENER -->
 <div class="fade-up">
 <h2 class="text-2xl font-bold mb-6 text-slate-800">CO-CONVENER</h2>
 <div class="grid md:grid-cols-2 gap-6">
@@ -130,14 +142,75 @@
 </div>
 </div>
 
+<!-- CONFERENCE ORGANIZING SECRETARIES -->
+<div class="fade-up">
+<div class="bg-white p-10 rounded-xl border card-hover">
+<h2 class="text-2xl font-bold mb-6 text-slate-800">CONFERENCE ORGANIZING SECRETARIES</h2>
+<ul class="space-y-2 text-sm text-gray-700">
+<li>Dr. Priyanka Verma</li>
+<li>Dr. Kriti Sankhlan</li>
+<li>Dr. Bright Keshwani, R&D Cell, PU</li>
+<li>Dr. Ashish Avasthi</li>
+</ul>
 </div>
-</section>
+</div>
 
-<script>
-document.getElementById("menuBtn").addEventListener("click", function () {
-document.getElementById("mobileMenu").classList.toggle("hidden");
-});
-</script>
+<!-- ORGANIZING CHAIRS -->
+<div class="fade-up">
+<div class="bg-white p-10 rounded-xl border card-hover">
+<h2 class="text-2xl font-bold mb-6 text-slate-800">ORGANIZING CHAIRS</h2>
+<ul class="space-y-2 text-sm text-gray-700">
+<li>Mr. Sunil Bhargava, Director, PIHM</li>
+<li>Dr. Priti Kaushik, Dean (FSH)</li>
+<li>Dr. Jitendra Sharma, Dean (FDA)</li>
+<li>Dr. Ankush Kumar Jain, Dean (FET)</li>
+<li>Dr. Rakesh Kumar Gupta, Dean (Student Welfare)</li>
+<li>Dr. Swati Gokhru, Dean (International Relations)</li>
+<li>Dr. Ajay Kumar Pagare, Associate Dean (IQAC)</li>
+<li>Dr. Sushil Kumar Jain, Associate Dean (Academics)</li>
+<li>Dr. Pooja Gupta, Dean (I/C – FIRE)</li>
+<li>Mr. Naval Kishor Jain, COE</li>
+</ul>
+</div>
+</div>
 
-</body>
-</html>
+<!-- ORGANIZING CO-CHAIRS -->
+<div class="fade-up">
+<div class="bg-white p-10 rounded-xl border card-hover">
+<h2 class="text-2xl font-bold mb-6 text-slate-800">ORGANIZING CO-CHAIRS</h2>
+<ul class="space-y-2 text-sm text-gray-700">
+<li>Dr. Vishnu Sharma HOD MCA</li>
+<li>Dr. Savita Shivani HOD BCA (Higher)</li>
+<li>Dr. Pratish Rawat, HOD – Department of First year, FET & FCE</li>
+<li>Ms. Abhilasha Khandelwal, Dy-HOD B.Tech. Higher(FET)</li>
+<li>Dr. Deepika Saxena, HOD BCA First Year</li>
+<li>Dr. Manali Pareek Dy-HOD BCA Higher</li>
+<li>Ms. Kavita Lal DyHOD MCA</li>
+<li>Dr. Imran Mirza Dy-BCA First Year</li>
+<li>Dr. Devesh Kumar, HOD - Department of Mechanical Engineering</li>
+<li>Dr. Ashish Raj, HOD - Department of Electrical & Electronics Engineering</li>
+<li>Dr. Gaurav Malpani, HOD - Department of Commerce</li>
+<li>Dr. Monika Khatri, HOD - Department of Management (BBA)</li>
+<li>Dr. Urvashi Bhamboo, HOD - Department of Management (MBA)</li>
+<li>Ms. Shikha Sharma, HOD - Department of Computer Science & Engineering (B.Tech II to IV year)</li>
+<li>Mr. K. K. Parihar, HOD – PIHM</li>
+<li>Ms. Sunita Prareek, Chief Librarian</li>
+</ul>
+</div>
+</div>
+
+<!-- TECHNICAL PROGRAM CHAIRS -->
+<div class="fade-up">
+<div class="bg-white p-10 rounded-xl border card-hover">
+<h2 class="text-2xl font-bold mb-6 text-slate-800">TECHNICAL PROGRAM CHAIRS</h2>
+<ul class="space-y-2 text-sm text-gray-700">
+<li>Dr. Devendra Somwanshi, Registrar, PCE</li>
+<li>Dr. Gautam Singh, Registrar, PIET</li>
+<li>Dr. Vishnu Sharma, HOD – Department of Computer Science & Application (MCA & BCA higher classes)</li>
+<li>Ms. Kavita Lal, HOD – Department of Computer Science & Application (MCA & BCA first year)</li>
+<li>Dr. Pooja Gupta, HOD - Faculty of Innovation, Research, and Entrepreneurship</li>
+<li>Mr. Kumar Rahul Mayank, HOD - Department of Fashion, Textile & Apparel Design</li>
+<li>Md. Firdos Sheikh, Deputy HOD - Department of Computer Science & Engineering</li>
+</ul>
+</div>
+</div>
