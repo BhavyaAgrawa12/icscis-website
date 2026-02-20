@@ -1,152 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Committee | ICSCIS 2026</title>
-<link href="assets/css/output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Committee | ICSCIS 2026</title>
+  <link href="assets/css/output.css" rel="stylesheet">
 
-<style>
-.section-bg {
-  background: #f8fafc;
-}
-
-.committee-card {
-  background: white;
-  border-radius: 14px;
-  padding: 28px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-  transition: all 0.3s ease;
-}
-
-.committee-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(30,58,138,0.12);
-}
-
-.section-title {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #1e3a8a;
-}
-</style>
+  <style>
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    .fade-up {
+      animation: fadeUp 0.6s ease forwards;
+    }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-white text-gray-800">
 
-<!-- ===== HEADER (KEEP EXACT SAME AS INDEX) ===== -->
+<!-- ================= HEADER (PASTE EXACT NAVIGATION FROM INDEX.HTML HERE) ================= -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
-  <!-- Your existing navigation here exactly same as index.html -->
+  <!-- PASTE YOUR COMPLETE NAVIGATION HERE EXACTLY SAME AS INDEX.HTML -->
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-20 text-center">
-  <h1 class="text-4xl font-bold mb-4">Committee</h1>
-  <p class="text-white/90 text-lg">Meet the conference organizing committee</p>
+
+<!-- ================= HERO ================= -->
+<section class="py-20 bg-gradient-to-r from-slate-900 to-indigo-900 text-white text-center">
+  <div class="max-w-7xl mx-auto px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Committee</h1>
+    <p class="text-white/80 text-lg">Meet the conference organizing committee</p>
+  </div>
 </section>
 
-<!-- ===== COMMITTEE CONTENT ===== -->
-<section class="section-bg py-20">
+
+<!-- ================= CONTENT ================= -->
+<section class="py-20 bg-slate-50">
 <div class="max-w-7xl mx-auto px-6 space-y-20">
 
   <!-- HONORARY PATRON -->
-  <div>
-    <h2 class="section-title">HONORARY PATRON</h2>
+  <div class="fade-up">
+    <h2 class="text-2xl font-bold text-slate-800 mb-8">HONORARY PATRON</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="committee-card">Mr. Shashikant Singhi, Chairperson, PU</div>
-      <div class="committee-card">Dr. Suresh Chandra Padhy, President, PU</div>
-      <div class="committee-card">Ar. Rahul Singhi, Director, PU</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover font-semibold">
+        Mr. Shashikant Singhi, Chairperson, PU
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover font-semibold">
+        Dr. Suresh Chandra Padhy, President, PU
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover font-semibold">
+        Ar. Rahul Singhi, Director, PU
+      </div>
     </div>
   </div>
 
   <!-- ADVISORS -->
-  <div>
-    <h2 class="section-title">ADVISORS</h2>
+  <div class="fade-up">
+    <h2 class="text-2xl font-bold text-slate-800 mb-8">ADVISORS</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="committee-card">Dr. Manoj Gupta, Pro-President, PU</div>
-      <div class="committee-card">Dr. Chandni Kripalani, Pro-President, PU</div>
-      <div class="committee-card">Ar. Manjiri Rai, Pro-President, PU</div>
-      <div class="committee-card">Dr. Devendar Somwanshi Registrar, PU</div>
-      <div class="committee-card">Dr. Mahesh M. Bundele, Principal, PCE</div>
-      <div class="committee-card">Dr. Dinesh Goyal, Principal, PIET</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">Dr. Manoj Gupta, Pro-President, PU</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">Dr. Chandni Kripalani, Pro-President, PU</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">Ar. Manjiri Rai, Pro-President, PU</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">Dr. Devendar Somwanshi Registrar, PU</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">Dr. Mahesh M. Bundele, Principal, PCE</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">Dr. Dinesh Goyal, Principal, PIET</div>
     </div>
   </div>
 
   <!-- CONFERENCE CHAIRS -->
-  <div>
-    <h2 class="section-title">CONFERENCE CHAIRS</h2>
+  <div class="fade-up">
+    <h2 class="text-2xl font-bold text-slate-800 mb-8">CONFERENCE CHAIRS</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="committee-card">Dr. Ajay Khuteta</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+        Dr. Ajay Khuteta
+      </div>
     </div>
   </div>
 
-  <!-- CONFERENCE CO-CHAIRS -->
-  <div>
-    <h2 class="section-title">CONFERENCE Co-CHAIRS</h2>
+  <!-- CONFERENCE Co-CHAIRS -->
+  <div class="fade-up">
+    <h2 class="text-2xl font-bold text-slate-800 mb-8">CONFERENCE Co-CHAIRS</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="committee-card">Dr. Shikha Sharma</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+        Dr. Shikha Sharma
+      </div>
     </div>
   </div>
 
   <!-- CONVENER -->
-  <div>
-    <h2 class="section-title">CONVENER</h2>
+  <div class="fade-up">
+    <h2 class="text-2xl font-bold text-slate-800 mb-8">CONVENER</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="committee-card">Dr. Saurabh Shandilya</div>
-      <div class="committee-card">Dr. Udit Mamodia</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+        Dr. Saurabh Shandilya
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+        Dr. Udit Mamodia
+      </div>
     </div>
   </div>
 
   <!-- CO-CONVENER -->
-  <div>
-    <h2 class="section-title">CO-CONVENER</h2>
+  <div class="fade-up">
+    <h2 class="text-2xl font-bold text-slate-800 mb-8">CO-CONVENER</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="committee-card">Dr. Sumit Kapoor</div>
-      <div class="committee-card">Mr. Firdosh</div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+        Dr. Sumit Kapoor
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+        Mr. Firdosh
+      </div>
     </div>
   </div>
 
-  <!-- IMPORTANT -->
-  <!-- For your huge International & National Advisory lists:
-       DO NOT put each name inside a card.
-       It will look terrible and heavy.
-       Instead use 2-column bullet layout inside a single large card.
+  <!-- ================= IMPORTANT ================= -->
+  <!-- FROM HERE DOWN: 
+       PASTE YOUR FULL ORIGINAL CONTENT EXACTLY
+       FROM "CONFERENCE ORGANIZING SECRETARIES"
+       ALL THE WAY TO
+       "TECHNICAL NETWORK ADMINISTRATOR"
+       WITHOUT REMOVING A SINGLE NAME.
+       
+       Just wrap each section like this:
   -->
 
-  <div>
-    <h2 class="section-title">INTERNATIONAL ADVISORY COMMITTEE</h2>
-    <div class="committee-card">
-      <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
-        <div>Michael Baron, Charles Sturt University, Australia</div>
-        <div>Lakshmanan Sethu Sankaranarayanan, Google, USA</div>
-        <div>Prof. Ajit Khosla, Yamagata University, Japan</div>
-        <div>Dr. Sara Ravan Ramzani, Germany</div>
-        <!-- Continue ALL names exactly as you provided -->
-      </div>
+  <!-- Example Wrapper Structure -->
+  <!--
+  <div class="fade-up">
+    <div class="bg-white p-10 rounded-xl border border-gray-200 shadow-sm card-hover">
+      <h2 class="text-2xl font-bold text-slate-800 mb-6">SECTION TITLE</h2>
+      <ul class="space-y-2 text-sm text-gray-700">
+         ... ALL YOUR ORIGINAL LIST ITEMS EXACTLY SAME ...
+      </ul>
     </div>
   </div>
-
-  <div>
-    <h2 class="section-title">NATIONAL ADVISORY COMMITTEE</h2>
-    <div class="committee-card">
-      <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
-        <div>Dr. Jaivir Tyagi, Ex- Director, NIH, Roorkee</div>
-        <div>Dr. Harish Kumar Khyani, MBM University, Jodhpur</div>
-        <div>Dr. Vijay Mohan Shrimal, Chandigarh University</div>
-        <div>Dr. P. Saravanan, SRM Institute of Science and Technology</div>
-        <!-- Continue ALL names exactly as you provided -->
-      </div>
-    </div>
-  </div>
+  -->
 
 </div>
 </section>
 
-<!-- ===== FOOTER (KEEP SAME AS INDEX) ===== -->
+
+<!-- ================= FOOTER (PASTE SAME AS INDEX.HTML) ================= -->
 <footer>
-  <!-- Your existing footer -->
+  <!-- PASTE YOUR FOOTER HERE -->
 </footer>
 
 </body>
