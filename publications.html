@@ -7,80 +7,69 @@
 <link href="assets/css/output.css" rel="stylesheet">
 
 <style>
-.hero-bg {
-  background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+body {
+  animation: fadePage 0.8s ease-in-out;
 }
 
-.section-soft {
-  background: #eef2ff;
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.publication-card {
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modern-card {
   background: white;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 50px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.06);
   transition: 0.4s ease;
 }
 
-.publication-card:hover {
+.modern-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 25px 60px rgba(30,58,138,0.18);
 }
 
-.partner-box {
+.partner-card {
   background: white;
   padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   transition: 0.4s ease;
 }
 
-.partner-box:hover {
+.partner-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(30,58,138,0.15);
+  box-shadow: 0 20px 50px rgba(30,58,138,0.15);
 }
 
-.partner-box img {
-  transition: 0.3s ease;
+.partner-card img {
+  transition: 0.4s ease;
 }
 
-.partner-box:hover img {
-  transform: scale(1.05);
-}
-
-.highlight-line {
-  width: 70px;
-  height: 4px;
-  background: #1e3a8a;
-  margin: 20px auto 50px auto;
-  border-radius: 4px;
+.partner-card:hover img {
+  transform: scale(1.08);
 }
 </style>
 </head>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-});
-</script>
-
 <body class="bg-gray-50 text-gray-800">
 
-<!-- ================= HEADER (UNCHANGED SAME AS INDEX) ================= -->
+<!-- ================= HEADER ================= -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
 
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-4">
-      <img src="assets/images/PU_Logo.png" class="h-12">
-    </div>
+    <img src="assets/images/PU_Logo.png" class="h-12">
 
     <div class="hidden md:flex gap-6 text-sm font-semibold">
       <a href="#" class="text-primary hover:underline">AIP Conference Proceedings</a>
@@ -110,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
 
         <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-
       </div>
 
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
@@ -120,15 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <li><a href="call-for-papers.html">Call for Papers</a></li>
           <li><a href="submission.html">Submission</a></li>
           <li><a href="publications.html" class="text-primary font-semibold">Publications</a></li>
-          <li><a href="registration.html">Registrations</a></li>
-          <li><a href="downloads.html">Downloads</a></li>
-          <li><a href="committee.html">Committee</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="sponsorship.html">Sponsorship</a></li>
-          <li><a href="special-sessions.html">Special Sessions</a></li>
-          <li><a href="venue.html">Venue</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
@@ -137,29 +116,32 @@ document.addEventListener("DOMContentLoaded", function () {
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero-bg text-white py-28 text-center">
-  <h1 class="text-4xl font-bold mb-4">Publications</h1>
-  <p class="text-white/90 text-lg">Conference proceedings and publication details</p>
+<section class="bg-primary text-white py-28 text-center fade-section">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Publications</h1>
+  <p class="text-white/90 text-lg md:text-xl">
+    Conference proceedings and journal publication opportunities
+  </p>
 </section>
 
 <!-- ================= PUBLICATION PARTNERS ================= -->
-<section class="py-24 section-soft">
+<section class="py-24 bg-white fade-section">
   <div class="max-w-6xl mx-auto px-6 text-center">
 
-    <h3 class="text-2xl font-bold text-primary">PUBLICATION PARTNERS</h3>
-    <div class="highlight-line"></div>
+    <h2 class="text-3xl font-bold text-primary mb-16">
+      Publication Partners
+    </h2>
 
-    <div class="grid md:grid-cols-3 gap-12">
+    <div class="grid md:grid-cols-3 gap-10">
 
-      <div class="partner-box">
+      <div class="partner-card">
         <img src="assets/images/scopus.png" class="mx-auto h-20">
       </div>
 
-      <div class="partner-box">
+      <div class="partner-card">
         <img src="assets/images/springer.png" class="mx-auto h-24">
       </div>
 
-      <div class="partner-box">
+      <div class="partner-card">
         <img src="assets/images/wos.png" class="mx-auto h-20">
       </div>
 
@@ -169,21 +151,32 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 
 <!-- ================= PUBLICATION DETAILS ================= -->
-<section class="py-24">
+<section class="py-24 bg-gray-50 fade-section">
   <div class="max-w-5xl mx-auto px-6">
 
-    <div class="publication-card text-center">
+    <div class="modern-card text-center">
 
-      <h3 class="text-2xl font-bold text-primary mb-6">CONFERENCE PUBLICATION</h3>
-      <p class="text-gray-700 mb-12 leading-relaxed">
-        All selected papers will be recommended for publication in SPRINGER Conference Proceedings (SCOPUS Indexed) as per the terms & conditions.
+      <h3 class="text-2xl font-bold text-primary mb-6">
+        Conference Publication
+      </h3>
+
+      <p class="text-gray-700 mb-12 leading-relaxed text-lg">
+        All accepted and presented papers will be recommended for publication in
+        <span class="font-semibold">SPRINGER Conference Proceedings (SCOPUS Indexed)</span>
+        subject to publisher terms and quality guidelines.
       </p>
 
-      <h3 class="text-2xl font-bold text-primary mb-6">JOURNAL PUBLICATION</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Author interested in journal publication may submit the paper in the following associated journal
+      <div class="border-t border-gray-200 my-10"></div>
+
+      <h3 class="text-2xl font-bold text-primary mb-6">
+        Journal Publication
+      </h3>
+
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Authors interested in journal publication may submit extended versions of their work to associated journals.
+        <br><br>
         <span class="font-semibold">
-          (Article processing charges will be paid by authors as per Journal norms)
+          (Article Processing Charges will apply as per journal norms.)
         </span>
       </p>
 
@@ -192,74 +185,38 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </section>
 
- <!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
 <footer class="bg-gradient-to-r from-[#0b1e6b] to-[#08134a] text-white pt-16 pb-8">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <!-- Top Grid -->
-    <div class="grid md:grid-cols-4 gap-10 mb-10">
-
-      <!-- Column 1 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">ICSCIS 2026</h3>
-        <p class="text-sm text-gray-300 leading-relaxed">
-          2nd International Conference on Sustainable Computing and Intelligent Systems
-        </p>
-        <p class="text-sm text-gray-300 mt-3">
-          June 26-27, 2026
-        </p>
-      </div>
-
-      <!-- Column 2 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="call-for-papers.html" class="hover:text-white transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-white transition">Submission</a></li>
-          <li><a href="registration.html" class="hover:text-white transition">Registration</a></li>
-          <li><a href="committee.html" class="hover:text-white transition">Committee</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">Information</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="publications.html" class="hover:text-white transition">Publications</a></li>
-          <li><a href="speakers.html" class="hover:text-white transition">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-white transition">Sponsorship</a></li>
-          <li><a href="venue.html" class="hover:text-white transition">Venue</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">Contact</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li>✉ saurabh.shandilya@poornima.edu.in</li>
-          <li>✉ udit.mamodya@poornima.edu.in</li>
-          <li>📞 +91-9887587811</li>
-          <li>📞 +91-7014977762</li>
-          <li>📍 Jaipur, Rajasthan, India</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Divider -->
-    <!-- Divider -->
-<div class="border-t border-blue-800 pt-6 mt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
-
-  <p>© 2026 Poornima University. All rights reserved.</p>
-
-  <div class="text-center md:text-right mt-3 md:mt-0">
-    <p>Developed by Bhumika Aggarwal (Student), Poornima University</p>
-    <p>Developed by Bhavya Agrawal (Student), Poornima University</p>
-  </div>
-
-</div>
+  <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-300">
+    © 2026 Poornima University. All rights reserved.
   </div>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  const sections = document.querySelectorAll(".fade-section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>
 
 </body>
 </html>
