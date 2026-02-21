@@ -2,11 +2,11 @@
   "name": "icscis-website",
   "version": "1.0.0",
   "description": "",
-  "main": "postcss.config.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "dev": "node server.js && tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --minify"
+    "dev": "node --watch --watch-path=./public src/server.js && tailwindcss -i ./src/input.css -o ./public/assets/css/output.css --watch",
+    "build": "rm -rf dist && mkdir dist && tailwindcss -i ./src/input.css -o ./dist/assets/css/output.css --minify && cp -r public/* dist/ && cp src/server.js dist/server.js"
   },
   "keywords": [],
   "author": "",
