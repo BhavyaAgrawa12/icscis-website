@@ -7,50 +7,56 @@
 <link href="assets/css/output.css" rel="stylesheet">
 
 <style>
-/* Card hover */
+
+/* Page Fade */
+body { animation: fadePage 0.8s ease-in-out; }
+
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Section Reveal */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Card */
 .contact-card {
   background: linear-gradient(135deg, #eef2ff, #e0e7ff);
   border-radius: 18px;
   padding: 40px;
-  transition: all 0.4s ease;
+  transition: all 0.35s ease;
 }
+
 .contact-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 25px 50px rgba(79, 70, 229, 0.25);
 }
 
-/* Fade animation */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease;
-}
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 </style>
 </head>
 
-<body class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
 <!-- ================= HEADER ================= -->
-<header class="bg-white shadow-sm sticky top-0 z-50 hero-animate">
-
+<header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-
-    <div class="flex items-center gap-4">
-      <img src="assets/images/PU_Logo.png" alt="Poornima University" class="h-12 transition-transform duration-500 hover:scale-105">
-    </div>
+    <img src="assets/images/PU_Logo.png" class="h-12">
 
     <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary hover:text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary hover:text-primary">Scopus Indexed</div>
+      <div class="text-primary">AIP Conference Proceedings</div>
+      <div class="text-primary">Scopus Indexed</div>
     </div>
-
   </div>
-
-  <nav class="border-t border-gray-200">
+   <nav class="border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center py-3">
 
@@ -58,7 +64,7 @@
           <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
           <li><a href="about.html" class="hover:text-primary transition">About</a></li>
           <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
+          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
           <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
           <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
           <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
@@ -80,7 +86,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html">Submission</a></li>
+          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="registration.html">Registrations</a></li>
           <li><a href="downloads.html">Downloads</a></li>
@@ -98,68 +104,91 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section style="
-  background-color: #1e3a8a;
-  padding: 80px 0;
-  text-align: center;
-  color: white;
-">
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <h1 style="font-size: 40px; font-weight: 700; margin-bottom: 15px;">
-      Contact Us
-    </h1>
-    <p style="font-size: 18px; opacity: 0.9;">
-      Get in touch with the conference organizing team
-    </p>
+<!-- ================= HERO (Slider Style Like Other Pages) ================= -->
+<section class="pt-20 pb-8 bg-gray-100 fade-section">
+
+  <div class="max-w-5xl mx-auto px-6 relative">
+
+    <!-- Slider -->
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+      <div class="slider relative w-full h-72 md:h-[450px]">
+
+        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+          <img src="assets/images/building.avif" class="w-full h-full object-cover">
+        </div>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/poornima 3.webp" class="w-full h-full object-cover">
+        </div>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/footercover.webp" class="w-full h-full object-cover">
+        </div>
+
+      </div>
+      <div class="absolute inset-0 bg-black/10"></div>
+    </div>
+
+    <!-- Floating White Card -->
+    <div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-6 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
+        Contact Us
+      </h2>
+      <p class="text-gray-500">
+        Get in touch with the conference organizing team
+      </p>
+      <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full mt-3"></div>
+    </div>
+
   </div>
+
 </section>
 
 <!-- ================= CONTACT SECTION ================= -->
-<section class="py-24">
+<section class="py-24 bg-white fade-section">
 <div class="max-w-7xl mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
 <!-- CONVENER -->
-<div class="contact-card fade-up">
+<div class="contact-card">
 <h2 class="text-2xl font-bold text-indigo-700 mb-8">Convener</h2>
 
 <div class="mb-8">
-<h3 class="font-semibold text-gray-900 text-lg">Dr. Saurabh Shandilya</h3>
+<h3 class="font-semibold text-lg">Dr. Saurabh Shandilya</h3>
 <p class="text-gray-600">Professor, PU, Jaipur</p>
 <p class="text-sm text-gray-600 mt-2">Faculty of Computer Science Engineering</p>
 <p class="text-sm text-indigo-700 mt-2 font-medium">Email – saurabh.shandilya@poornima.edu.in</p>
-<p class="text-sm text-gray-800 mt-1 font-semibold">Mobile - +91-9887587811</p>
+<p class="text-sm font-semibold mt-1">Mobile - +91-9887587811</p>
 </div>
 
 <div>
-<h3 class="font-semibold text-gray-900 text-lg">Dr. Udit Mamodia</h3>
+<h3 class="font-semibold text-lg">Dr. Udit Mamodiya</h3>
 <p class="text-gray-600">Associate Professor, PU, Jaipur</p>
 <p class="text-sm text-gray-600 mt-2">Head R&D Cell</p>
 <p class="text-sm text-indigo-700 mt-2 font-medium">Email – udit.mamodiya@poornima.edu.in</p>
-<p class="text-sm text-gray-800 mt-1 font-semibold">Mobile - +91-7014937762</p>
+<p class="text-sm font-semibold mt-1">Mobile - +91-7014937762</p>
 </div>
 
 </div>
 
 <!-- CO-CONVENER -->
-<div class="contact-card fade-up">
+<div class="contact-card">
 <h2 class="text-2xl font-bold text-indigo-700 mb-8">Co-Convener</h2>
 
 <div class="mb-8">
-<h3 class="font-semibold text-gray-900 text-lg">Dr. Sumit Kapoor</h3>
+<h3 class="font-semibold text-lg">Dr. Sumit Kapoor</h3>
 <p class="text-gray-600">Associate Professor, PU, Jaipur</p>
 <p class="text-sm text-gray-600 mt-2">Faculty of Computer Science Engineering</p>
 <p class="text-sm text-indigo-700 mt-2 font-medium">Email – sumit.kapoor@poornima.edu.in</p>
-<p class="text-sm text-gray-800 mt-1 font-semibold">Mobile - +91-8006690016</p>
+<p class="text-sm font-semibold mt-1">Mobile - +91-8006690016</p>
 </div>
 
 <div>
-<h3 class="font-semibold text-gray-900 text-lg">Dr. Deepen Banoriya</h3>
+<h3 class="font-semibold text-lg">Dr. Deepen Banoriya</h3>
 <p class="text-gray-600">Professor, PU, Jaipur</p>
 <p class="text-sm text-gray-600 mt-2">Member, R&D Cell</p>
 <p class="text-sm text-indigo-700 mt-2 font-medium">Email - deepen.banoriya@poornima.edu.in</p>
-<p class="text-sm text-gray-800 mt-1 font-semibold">Mobile - +91-7000542674</p>
+<p class="text-sm font-semibold mt-1">Mobile - +91-7000542674</p>
 </div>
 
 </div>
@@ -167,23 +196,6 @@
 </div>
 </div>
 </section>
-
-
-
-<script>
-document.getElementById("menuBtn").addEventListener("click", function () {
-document.getElementById("mobileMenu").classList.toggle("hidden");
-});
-
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add("show");
-}
-});
-});
-document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
-</script>
 
 <div id="footer-placeholder"></div>
 
@@ -200,6 +212,48 @@ fetch("components/footer.html")
       footer.classList.add("show-footer");
     }, 100);
   });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* Slider */
+  const sliders = document.querySelectorAll(".slider");
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".slide");
+    let current = 0;
+
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[current].classList.remove("opacity-100");
+        slides[current].classList.add("opacity-0");
+        current = (current + 1) % slides.length;
+        slides[current].classList.remove("opacity-0");
+        slides[current].classList.add("opacity-100");
+      }, 4000);
+    }
+  });
+
+  /* Section Animation */
+  const sections = document.querySelectorAll(".fade-section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+
+  /* Footer */
+  fetch("components/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+
+});
 </script>
 
 </body>

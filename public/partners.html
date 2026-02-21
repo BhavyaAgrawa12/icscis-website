@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partners & Sponsors | ICSCIS 2026</title>
-  <link href="assets/css/output.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners & Sponsors | ICSCIS 2026</title>
+<link href="assets/css/output.css" rel="stylesheet">
 
-  <style>
-    body { animation: fadePage 0.8s ease-in-out; }
+<style>
+body { animation: fadePage 0.8s ease-in-out; }
 
-    @keyframes fadePage {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    .fade-section {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
+/* Section animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
 
-    .fade-section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .partner-card {
-      transition: all 0.35s ease;
-      background: white;
-    }
+/* Partner cards */
+.partner-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+  background: white;
+}
 
-    .partner-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    }
+.partner-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .partner-card img {
-      transition: transform 0.4s ease;
-    }
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
 
-    .partner-card:hover img {
-      transform: scale(1.05);
-    }
-  </style>
+.partner-card img {
+  transition: transform 0.4s ease;
+}
+
+.partner-card:hover img {
+  transform: scale(1.05);
+}
+</style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
-
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-4">
-      <img src="assets/images/PU_Logo.png" alt="Poornima University" class="h-12">
-    </div>
+    <img src="assets/images/PU_Logo.png" alt="Poornima University" class="h-12">
 
     <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary hover:text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary hover:text-primary">Scopus Indexed</div>
+      <div class="text-primary">AIP Conference Proceedings</div>
+      <div class="text-primary">Scopus Indexed</div>
     </div>
   </div>
 
@@ -69,12 +75,12 @@
           <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
           <li><a href="about.html" class="hover:text-primary transition">About</a></li>
           <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
+          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
           <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
           <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
           <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
           <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
-          <li><a href="partners.html" class="text-primary font-semibold">Partners</a></li>
+          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
           <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
           <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
           <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
@@ -83,6 +89,7 @@
         </ul>
 
         <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
+
       </div>
 
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
@@ -90,12 +97,12 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html">Submission</a></li>
+          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="registration.html">Registrations</a></li>
           <li><a href="downloads.html">Downloads</a></li>
           <li><a href="committee.html">Committee</a></li>
-          <li><a href="partners.html" class="text-primary font-semibold">Partners</a></li>
+          <li><a href="partners.html">Partners</a></li>
           <li><a href="speakers.html">Speakers</a></li>
           <li><a href="sponsorship.html">Sponsorship</a></li>
           <li><a href="special-sessions.html">Special Sessions</a></li>
@@ -108,17 +115,43 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="bg-primary text-white py-24 fade-section">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Partners & Sponsors</h1>
-    <p class="text-white/90 text-lg md:text-xl">
-      Organizations supporting ICSCIS 2026
-    </p>
+<!-- HERO -->
+<section class="pt-20 pb-16 bg-gray-100 fade-section">
+  <div class="max-w-5xl mx-auto px-6 relative">
+
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+      <div class="slider relative w-full h-72 md:h-[450px]">
+
+        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+          <img src="assets/images/building.avif" class="w-full h-full object-cover">
+        </div>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/poornima 3.webp" class="w-full h-full object-cover">
+        </div>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/footercover.webp" class="w-full h-full object-cover">
+        </div>
+
+      </div>
+      <div class="absolute inset-0 bg-black/10"></div>
+    </div>
+
+    <div class="relative mt-8 mb-16 w-fit mx-auto bg-white rounded-2xl shadow-lg px-10 py-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
+        Partners & Sponsors
+      </h2>
+      <p class="text-base md:text-lg text-gray-500 mb-2">
+        Organizations supporting ICSCIS 2026
+      </p>
+      <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+    </div>
+
   </div>
 </section>
 
-<!-- ================= TECHNICAL PARTNERS ================= -->
+<!-- TECHNICAL PARTNERS -->
 <section class="py-20 bg-white fade-section">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-2xl font-bold text-primary mb-12 text-center">
@@ -127,17 +160,17 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/isle.png" alt="ISLE" class="h-28 object-contain">
+        <img src="assets/images/isle.png" class="h-28 object-contain">
       </div>
 
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/ashrae.png" alt="ASHRAE" class="h-28 object-contain">
+        <img src="assets/images/ashrae.png" class="h-28 object-contain">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= INDUSTRY PARTNERS ================= -->
+<!-- INDUSTRY PARTNERS -->
 <section class="py-20 bg-gray-50 fade-section">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-2xl font-bold text-primary mb-12 text-center">
@@ -146,72 +179,182 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/sincgrid.jpg" alt="Sincgrid" class="h-28 object-contain">
+        <img src="assets/images/sincgrid.jpg" class="h-28 object-contain">
       </div>
-
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/kt.png" alt="KT" class="h-28 object-contain">
+        <img src="assets/images/kt.png" class="h-28 object-contain">
       </div>
-
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/ambition_tech.png" alt="Ambition Tech" class="h-28 object-contain">
+        <img src="assets/images/ambition_tech.png" class="h-28 object-contain">
       </div>
-
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/robofi.png" alt="Robofi" class="h-28 object-contain">
+        <img src="assets/images/robofi.png" class="h-28 object-contain">
       </div>
-
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/club_first.png" alt="Club First" class="h-28 object-contain">
+        <img src="assets/images/club_first.png" class="h-28 object-contain">
       </div>
-
       <div class="partner-card p-8 rounded-2xl flex justify-center items-center">
-        <img src="assets/images/zeetro.jpg" alt="Zeetro" class="h-28 object-contain">
+        <img src="assets/images/zeetro.jpg" class="h-28 object-contain">
       </div>
     </div>
   </div>
 </section>
 
+<!-- ================= CONFERENCE PARTNERS ================= -->
+<section class="py-24 bg-gray-50 fade-section">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+    <h2 class="text-3xl font-bold text-primary mb-16">
+      Conference Partners
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+  <div class="partner-card flex items-center justify-center py-10 px-6">
+    <img src="assets/images/nitttr_logo.jpeg"
+         class="max-h-32 w-auto object-contain">
+  </div>
+
+  <div class="partner-card flex items-center justify-center py-10 px-6">
+    <img src="assets/images/rcat_logo.jpeg"
+         class="max-h-32 w-auto object-contain">
+  </div>
+
+</div>
+
+</div>
+
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+/* Slider */
+const sliders = document.querySelectorAll(".slider");
+sliders.forEach((slider) => {
+const slides = slider.querySelectorAll(".slide");
+let current = 0;
+
+setInterval(() => {
+slides[current].classList.remove("opacity-100");
+slides[current].classList.add("opacity-0");
+
+current = (current + 1) % slides.length;
+
+slides[current].classList.remove("opacity-0");
+slides[current].classList.add("opacity-100");
+}, 4000);
+});
+
+/* Scroll Animation */
+const sections = document.querySelectorAll(".fade-section");
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add("show");
+}
+});
+}, { threshold: 0.15 });
+
+sections.forEach(section => observer.observe(section));
+});
+
+/* Footer Load */
+fetch("components/footer.html")
+.then(response => response.text())
+.then(data => {
+const placeholder = document.getElementById("footer-placeholder");
+placeholder.innerHTML = data;
+setTimeout(() => {
+const footer = placeholder.querySelector(".footer");
+if (footer) footer.classList.add("show-footer");
+}, 100);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* Mobile Menu */
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
   if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", function () {
+    menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
   }
 
+  /* Slider */
+  const sliders = document.querySelectorAll(".slider");
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".slide");
+    let current = 0;
+
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[current].classList.remove("opacity-100");
+        slides[current].classList.add("opacity-0");
+        current = (current + 1) % slides.length;
+        slides[current].classList.remove("opacity-0");
+        slides[current].classList.add("opacity-100");
+      }, 4000);
+    }
+  });
+
+  /* Section animation */
   const sections = document.querySelectorAll(".fade-section");
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.1 });
 
-  sections.forEach(section => observer.observe(section));
+  sections.forEach(section => {
+    observer.observe(section);
+
+    // Force show if already visible
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      section.classList.add("show");
+    }
+  });
+
+  /* Stagger card animation */
+  const cards = document.querySelectorAll(".partner-card");
+
+  const cardObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("show");
+          }, index * 120);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  if (cards.length > 0) {
+    cardObserver.observe(cards[0]);
+  }
+
+  /* Footer Load */
+  fetch("components/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+
 });
 </script>
-<div id="footer-placeholder"></div>
 
-<script>
-fetch("components/footer.html")
-  .then(response => response.text())
-  .then(data => {
-    const placeholder = document.getElementById("footer-placeholder");
-    placeholder.innerHTML = data;
-
-    // Small delay so CSS applies first
-    setTimeout(() => {
-      const footer = placeholder.querySelector(".footer");
-      footer.classList.add("show-footer");
-    }, 100);
-  });
-</script>
 </body>
 </html>

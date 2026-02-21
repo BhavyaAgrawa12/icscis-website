@@ -1,98 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration | ICSCIS 2026</title>
-  <link href="assets/css/output.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration | ICSCIS 2026</title>
+<link href="assets/css/output.css" rel="stylesheet">
 
-  <style>
-    /* ===== Page Fade ===== */
-    body {
-      animation: fadePage 0.8s ease-in-out;
-    }
+<style>
+/* Page Fade */
+body {
+  animation: fadePage 0.8s ease-in-out;
+}
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    @keyframes fadePage {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+/* Scroll Animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* ===== Scroll Reveal ===== */
-    .fade-section {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease;
-    }
+/* Card Style */
+.modern-card {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+  transition: 0.4s ease;
+}
+.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(30,58,138,0.12);
+}
 
-    .fade-section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+table tbody tr:hover {
+  background-color: #f1f5ff;
+}
+</style>
+</head>
 
-    /* ===== Card Hover ===== */
-    .modern-card {
-      transition: all 0.35s ease;
-    }
+<body class="bg-gray-100 text-gray-800">
 
-    .modern-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    }
-
-    /* ===== Table Smooth ===== */
-    table tr {
-      transition: background 0.3s ease;
-    }
-
-    table tbody tr:hover {
-      background-color: #f1f5ff;
-    }
-  </style>
-  <header class="bg-white shadow-sm sticky top-0 z-50 hero-animate">
-
+<!-- ================= HEADER ================= -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-
-    <div class="flex items-center gap-4">
-      <img src="assets/images/PU_Logo.png" alt="Poornima University" class="h-12 transition-transform duration-500 hover:scale-105">
-    </div>
-
+    <img src="assets/images/PU_Logo.png" class="h-12">
     <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary hover:text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary hover:text-primary">Scopus Indexed</div>
+      <div class="text-primary">AIP Conference Proceedings</div>
+      <div class="text-primary">Scopus Indexed</div>
     </div>
-
   </div>
-
-  <nav class="border-t border-gray-200">
+   <nav class="border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center py-3">
 
         <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary">About</a></li>
-          <li><a href="call-for-papers.html" class="hover:text-primary">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary">Submission</a></li>
-          <li><a href="publications.html" class="text-primary font-semibold">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
+          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
+          <li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
+          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
+          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
+          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
+          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
+          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
+          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
+          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
+          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
+          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
+          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
         </ul>
 
         <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
       </div>
 
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
-        <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
+         <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
+          <li><a href="submission.html">Submission</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="registration.html">Registrations</a></li>
           <li><a href="downloads.html">Downloads</a></li>
@@ -109,25 +103,40 @@
     </div>
   </nav>
 </header>
-</head>
 
-<body class="bg-gray-50 text-gray-800">
+<!-- ================= SLIDER HERO ================= -->
+<section class="pt-20 pb-8 bg-gray-100 fade-section">
+  <div class="max-w-5xl mx-auto px-6 relative">
 
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+      <div class="slider relative w-full h-72 md:h-[450px]">
 
+        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+          <img src="assets/images/building.avif" class="w-full h-full object-cover">
+        </div>
 
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/poornima 3.webp" class="w-full h-full object-cover">
+        </div>
 
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/footercover.webp" class="w-full h-full object-cover">
+        </div>
 
-<!-- ===== HERO ===== -->
-<section class="bg-primary text-white py-24 fade-section">
-  <div class="max-w-7xl mx-auto px-6 text-center flex flex-col items-center justify-center">
+      </div>
+      <div class="absolute inset-0 bg-black/10"></div>
+    </div>
 
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-      Registration
-    </h2>
-
-    <p class="text-white/90 text-lg md:text-xl">
-      Register for ICSCIS 2026 Conference
-    </p>
+    <!-- White Title Card -->
+    <div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-5 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
+        Registration
+      </h2>
+      <p class="text-base md:text-lg text-gray-500 mb-2">
+        Register for ICSCIS 2026 Conference
+      </p>
+      <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+    </div>
 
   </div>
 </section>
@@ -136,18 +145,18 @@
 <section class="py-16 fade-section">
   <div class="max-w-6xl mx-auto px-6">
 
-    <div class="bg-blue-50 p-8 rounded-2xl modern-card">
+    <div class="bg-blue-100 p-8 rounded-2xl modern-card">
       <h3 class="text-2xl font-bold text-primary mb-8">Registration Dates</h3>
 
       <div class="grid md:grid-cols-2 gap-10">
         <div>
           <h4 class="font-semibold text-lg mb-2">Early Bird Registration</h4>
-          <p class="text-gray-600">15 May, 2026</p>
+          <p class="text-gray-600">5 September, 2026</p>
         </div>
 
         <div>
-          <h4 class="font-semibold text-lg mb-2">Late Registration</h4>
-          <p class="text-gray-600">31 May, 2026</p>
+          <h4 class="font-semibold text-lg mb-2">Last Registration</h4>
+          <p class="text-gray-600">15 September, 2026</p>
         </div>
       </div>
     </div>
@@ -155,11 +164,12 @@
   </div>
 </section>
 
+
 <!-- ===== PUBLICATION FEES ===== -->
 <section class="py-16 bg-white fade-section">
   <div class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-10">Registration Categories</h2>
+    <h2 class="text-3xl font-bold text-center text-primary mb-10">Registration Categories</h2>
 
     <div class="bg-gray-50 p-8 rounded-2xl modern-card overflow-x-auto">
 
@@ -190,11 +200,12 @@
   </div>
 </section>
 
+
 <!-- ===== ACCOUNT DETAILS ===== -->
 <section class="py-16 fade-section">
   <div class="max-w-6xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-10">Account Details</h2>
+    <h2 class="text-3xl font-bold text-center text-primary mb-10">Account Details</h2>
 
     <div class="bg-gray-50 p-8 rounded-2xl modern-card overflow-x-auto">
 
@@ -231,14 +242,41 @@
   </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
+<div id="footer-placeholder"></div>
 
-
-
-<!-- ===== SCROLL SCRIPT ===== -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".fade-section");
 
+  /* Mobile Menu */
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  /* Slider */
+  const sliders = document.querySelectorAll(".slider");
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".slide");
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.remove("opacity-0");
+      slides[current].classList.add("opacity-100");
+    }, 4000);
+  });
+
+  /* Scroll Section Animation */
+  const sections = document.querySelectorAll(".fade-section");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -248,32 +286,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { threshold: 0.15 });
 
   sections.forEach(section => observer.observe(section));
-})
 
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
+  /* Card Stagger Animation */
+  const cards = document.querySelectorAll(".card-animate");
 
-menuBtn.addEventListener("click", function () {
-  mobileMenu.classList.toggle("hidden");
+  const cardObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("show");
+          }, index * 150);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  if (cards.length > 0) {
+    cardObserver.observe(cards[0]);
+  }
+
 });
 
-</script>
- <!-- ================= FOOTER ================= -->
-<div id="footer-placeholder"></div>
-
-<script>
+/* Footer Load */
 fetch("components/footer.html")
   .then(response => response.text())
   .then(data => {
     const placeholder = document.getElementById("footer-placeholder");
     placeholder.innerHTML = data;
 
-    // Small delay so CSS applies first
     setTimeout(() => {
       const footer = placeholder.querySelector(".footer");
-      footer.classList.add("show-footer");
+      if (footer) footer.classList.add("show-footer");
     }, 100);
   });
 </script>
+
+
 </body>
 </html>

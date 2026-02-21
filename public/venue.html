@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venue | ICSCIS 2026</title>
-  <link href="assets/css/output.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venue | ICSCIS 2026</title>
+<link href="assets/css/output.css" rel="stylesheet">
 
-  <style>
-    body {
-      animation: fadePage 0.8s ease-in-out;
-    }
+<style>
 
-    @keyframes fadePage {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+/* Page Fade */
+body { animation: fadePage 0.8s ease-in-out; }
 
-    .fade-section {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    .fade-section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* Section Reveal */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
 
-    .modern-card {
-      transition: all 0.35s ease;
-      background: white;
-    }
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .modern-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-    }
-  </style>
+/* Card Hover */
+.modern-card {
+  transition: all 0.35s ease;
+  background: white;
+}
+
+.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+</style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
 <!-- ================= HEADER ================= -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
-
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-4">
-      <img src="assets/images/PU_Logo.png"
-           alt="Poornima University"
-           class="h-12">
-    </div>
+    <img src="assets/images/PU_Logo.png" class="h-12">
 
     <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary hover:text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary hover:text-primary">Scopus Indexed</div>
+      <div class="text-primary">AIP Conference Proceedings</div>
+      <div class="text-primary">Scopus Indexed</div>
     </div>
   </div>
-
   <nav class="border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center py-3">
 
         <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary">About</a></li>
-          <li><a href="call-for-papers.html" class="text-primary font-semibold">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary">Submission</a></li>
-          <li><a href="publications.html" class="hover:text-primary">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
+          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
+          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
+          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
+          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
+          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
+          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
+          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
+          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
+          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
+          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
+          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
+          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
         </ul>
 
         <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
@@ -83,7 +80,7 @@
       </div>
 
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
-       <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
+        <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="call-for-papers.html">Call for Papers</a></li>
@@ -105,18 +102,48 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="bg-primary text-white py-24 fade-section">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Venue</h1>
-    <p class="text-white/90 text-lg md:text-xl">
-      Conference location and travel information
-    </p>
+<!-- ================= HERO (Slider Style) ================= -->
+<section class="pt-20 pb-8 bg-gray-100 fade-section">
+
+  <div class="max-w-5xl mx-auto px-6 relative">
+
+    <!-- Slider -->
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+      <div class="slider relative w-full h-72 md:h-[450px]">
+
+        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+          <img src="assets/images/building.avif" class="w-full h-full object-cover">
+        </div>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/poornima 3.webp" class="w-full h-full object-cover">
+        </div>
+
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/footercover.webp" class="w-full h-full object-cover">
+        </div>
+
+      </div>
+      <div class="absolute inset-0 bg-black/10"></div>
+    </div>
+
+    <!-- Floating White Card -->
+    <div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-6 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
+        Venue
+      </h2>
+      <p class="text-gray-500">
+        Conference location and travel information
+      </p>
+      <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full mt-3"></div>
+    </div>
+
   </div>
+
 </section>
 
 <!-- ================= MAIN CONTENT ================= -->
-<section class="py-16 bg-white fade-section">
+<section class="py-20 bg-white fade-section">
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- Location + Map -->
@@ -125,28 +152,29 @@
       <div class="modern-card p-8 rounded-2xl">
         <h2 class="text-2xl font-bold text-primary mb-4">Poornima University</h2>
         <p class="text-gray-600 mb-6">
-          ICSCIS 2025 will be held at Poornima University, Jaipur - a state-of-the-art educational institution equipped with modern facilities for conducting international conferences.
+          ICSCIS 2026 will be held at Poornima University, Jaipur — 
+          a state-of-the-art educational institution equipped with modern facilities 
+          for international conferences.
         </p>
 
         <div class="space-y-6">
-
           <div>
-            <p class="font-semibold text-gray-900">Address</p>
-            <p class="text-gray-600 text-sm">
-              Poornima University, Plot No. IS-2027-2031, Ramchandrapura P.O. Vidhani Vatika Road Sitapura, Rajasthan 303905
+            <p class="font-semibold">Address</p>
+            <p class="text-sm text-gray-600">
+              Plot No. IS-2027-2031, Ramchandrapura P.O. 
+              Vidhani Vatika Road, Sitapura, Rajasthan 303905
             </p>
           </div>
 
           <div>
-            <p class="font-semibold text-gray-900">Phone</p>
-            <p class="text-gray-600 text-sm">+91-9887587811</p>
+            <p class="font-semibold">Phone</p>
+            <p class="text-sm text-gray-600">+91-9887587811</p>
           </div>
 
           <div>
-            <p class="font-semibold text-gray-900">Email</p>
-            <p class="text-gray-600 text-sm">icscis@poornima.edu.in</p>
+            <p class="font-semibold">Email</p>
+            <p class="text-sm text-gray-600">icscis@poornima.edu.in</p>
           </div>
-
         </div>
       </div>
 
@@ -154,67 +182,72 @@
         <a href="https://www.google.com/maps/place/Poornima+University/@26.7796222,75.8770182,17z/"
            target="_blank">
           <img src="assets/images/map.png"
-               alt="Poornima University Campus"
-               class="rounded-lg w-full object-contain hover:scale-105 transition duration-500">
+               class="rounded-xl w-full object-contain hover:scale-105 transition duration-500">
         </a>
       </div>
 
     </div>
 
     <!-- Facilities -->
-    <h2 class="text-3xl font-bold text-gray-900 mb-8">Venue Facilities</h2>
+    <h2 class="text-3xl font-bold mb-8">Venue Facilities</h2>
 
     <div class="grid md:grid-cols-2 gap-6 mb-16">
 
       <div class="modern-card p-6 rounded-2xl">
-        <h3 class="font-semibold text-gray-900 mb-4">Conference Facilities</h3>
+        <h3 class="font-semibold mb-4">Conference Facilities</h3>
         <ul class="space-y-2 text-sm text-gray-600">
           <li>✓ Large auditorium for keynote sessions</li>
           <li>✓ Multiple meeting rooms for parallel sessions</li>
-          <li>✓ High-speed WiFi throughout venue</li>
+          <li>✓ High-speed WiFi</li>
           <li>✓ Advanced audio-visual equipment</li>
         </ul>
       </div>
 
       <div class="modern-card p-6 rounded-2xl">
-        <h3 class="font-semibold text-gray-900 mb-4">Amenities</h3>
+        <h3 class="font-semibold mb-4">Amenities</h3>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li>✓ On-campus dining facilities</li>
+          <li>✓ On-campus dining</li>
           <li>✓ Parking available</li>
           <li>✓ Refreshment lounges</li>
-          <li>✓ Accessible facilities for all</li>
+          <li>✓ Accessible facilities</li>
         </ul>
       </div>
 
     </div>
 
     <!-- Travel -->
-    <h2 class="text-3xl font-bold text-gray-900 mb-8">Getting to Jaipur</h2>
+    <h2 class="text-3xl font-bold mb-8">Getting to Jaipur</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
 
       <div class="modern-card p-6 rounded-2xl">
-        <h3 class="font-semibold text-gray-900 mb-3">By Air✈️</h3>
-        <p class="text-sm text-gray-600 mb-4">
-          Jaipur International Airport (JAI) is well-connected to major Indian cities and international destinations.
+        <h3 class="font-semibold mb-3">By Air ✈️</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Jaipur International Airport (JAI) is well connected to major cities.
         </p>
-        <p class="text-xs text-gray-500">Distance from venue: ~13 km | Travel time: ~30 minutes</p>
+        <p class="text-xs text-gray-500">
+          Distance: ~13 km | Time: ~30 minutes
+        </p>
       </div>
 
       <div class="modern-card p-6 rounded-2xl">
-        <h3 class="font-semibold text-gray-900 mb-3">By Rail🚆</h3>
-        <p class="text-sm text-gray-600 mb-4">
-          Jaipur Railway Station connects to all major Indian cities with excellent connectivity.
+        <h3 class="font-semibold mb-3">By Rail 🚆</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Jaipur Railway Station connects to all major Indian cities.
         </p>
-        <p class="text-xs text-gray-500">Distance from venue: ~12 km | Travel time: ~25 minutes</p>
+        <p class="text-xs text-gray-500">
+          Distance: ~12 km | Time: ~25 minutes
+        </p>
       </div>
 
       <div class="modern-card p-6 rounded-2xl">
-        <h3 class="font-semibold text-gray-900 mb-3">By Road🚘</h3>
-        <p class="text-sm text-gray-600 mb-4">
-          Well-maintained highways connect Jaipur to neighboring cities and states.
+        <h3 class="font-semibold mb-3">By Road 🚘</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Excellent highway connectivity from Delhi and nearby states.
         </p>
-        <p class="text-xs text-gray-500">Delhi to Jaipur: ~260 km | Travel time: ~4.5 hours</p>
+        <p class="text-xs text-gray-500">
+          Delhi to Jaipur: ~260 km | ~4.5 hours
+        </p>
       </div>
 
     </div>
@@ -222,31 +255,6 @@
   </div>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-
-  const sections = document.querySelectorAll(".fade-section");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  sections.forEach(section => observer.observe(section));
-});
-</script>
 <div id="footer-placeholder"></div>
 
 <script>
@@ -263,5 +271,48 @@ fetch("components/footer.html")
     }, 100);
   });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* Slider */
+  const sliders = document.querySelectorAll(".slider");
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".slide");
+    let current = 0;
+
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[current].classList.remove("opacity-100");
+        slides[current].classList.add("opacity-0");
+        current = (current + 1) % slides.length;
+        slides[current].classList.remove("opacity-0");
+        slides[current].classList.add("opacity-100");
+      }, 4000);
+    }
+  });
+
+  /* Section Animation */
+  const sections = document.querySelectorAll(".fade-section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+
+  /* Footer */
+  fetch("components/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+
+});
+</script>
+
 </body>
 </html>
