@@ -278,72 +278,21 @@ speakerCards.forEach(card => {
 });
 });
 </script>
-<footer class="bg-gradient-to-r from-[#0b1e6b] to-[#08134a] text-white pt-16 pb-8">
-  <div class="max-w-7xl mx-auto px-6">
+<div id="footer-placeholder"></div>
 
-    <!-- Top Grid -->
-    <div class="grid md:grid-cols-4 gap-10 mb-10">
+<script>
+fetch("components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    const placeholder = document.getElementById("footer-placeholder");
+    placeholder.innerHTML = data;
 
-      <!-- Column 1 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">ICSCIS 2026</h3>
-        <p class="text-sm text-gray-300 leading-relaxed">
-          2nd International Conference on Sustainable Computing and Intelligent Systems
-        </p>
-        <p class="text-sm text-gray-300 mt-3">
-          June 26-27, 2026
-        </p>
-      </div>
-
-      <!-- Column 2 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="call-for-papers.html" class="hover:text-white transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-white transition">Submission</a></li>
-          <li><a href="registration.html" class="hover:text-white transition">Registration</a></li>
-          <li><a href="committee.html" class="hover:text-white transition">Committee</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">Information</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="publications.html" class="hover:text-white transition">Publications</a></li>
-          <li><a href="speakers.html" class="hover:text-white transition">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-white transition">Sponsorship</a></li>
-          <li><a href="venue.html" class="hover:text-white transition">Venue</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4 -->
-      <div>
-        <h3 class="font-semibold text-lg mb-4">Contact</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li>✉ saurabh.shandilya@poornima.edu.in</li>
-          <li>✉ udit.mamodya@poornima.edu.in</li>
-          <li>📞 +91-9887587811</li>
-          <li>📞 +91-7014977762</li>
-          <li>📍 Jaipur, Rajasthan, India</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Divider -->
-    <!-- Divider -->
-<div class="border-t border-blue-800 pt-6 mt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
-
-  <p>© 2026 Poornima University. All rights reserved.</p>
-
-  <div class="text-center md:text-right mt-3 md:mt-0">
-    <p>Developed by Bhumika Aggarwal (Student), Poornima University</p>
-    <p>Developed by Bhavya Agrawal (Student), Poornima University</p>
-  </div>
-
-</div>
-  </div>
-</footer>
+    // Small delay so CSS applies first
+    setTimeout(() => {
+      const footer = placeholder.querySelector(".footer");
+      footer.classList.add("show-footer");
+    }, 100);
+  });
+</script>
 </body>
 </html>
