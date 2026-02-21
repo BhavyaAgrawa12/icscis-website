@@ -598,6 +598,21 @@ html { scroll-behavior: smooth; }
 <div id="footer-placeholder"></div>
 
 <script>
+fetch("components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    const placeholder = document.getElementById("footer-placeholder");
+    placeholder.innerHTML = data;
+
+    // Small delay so CSS applies first
+    setTimeout(() => {
+      const footer = placeholder.querySelector(".footer");
+      footer.classList.add("show-footer");
+    }, 100);
+  });
+</script>
+
+<script>
   document.addEventListener("DOMContentLoaded", function () {
 
   /* MOBILE MENU */
