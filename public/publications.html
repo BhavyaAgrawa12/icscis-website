@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications | ICSCIS 2026</title>
+<link href="assets/css/output.css" rel="stylesheet">
+
+<style>
+body {
+  animation: fadePage 0.8s ease-in-out;
+}
+
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modern-card {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  transition: 0.4s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(30,58,138,0.18);
+}
+
+.partner-card {
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.4s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(30,58,138,0.15);
+}
+
+.partner-card img {
+  transition: 0.4s ease;
+}
+
+.partner-card:hover img {
+  transform: scale(1.08);
+}
+</style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <img src="assets/images/PU_Logo.png" class="h-12">
+
+     <div class="hidden md:flex gap-6 text-sm font-semibold">
+      <div class="text-primary hover:text-primary">AIP Conference Proceedings</div>
+      <div class="text-primary hover:text-primary">Scopus Indexed</div>
+    </div>
+  </div>
+
+  <nav class="border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+
+        <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
+          <li><a href="index.html" class="hover:text-primary">Home</a></li>
+          <li><a href="about.html" class="hover:text-primary">About</a></li>
+          <li><a href="call-for-papers.html" class="hover:text-primary">Call for Papers</a></li>
+          <li><a href="submission.html" class="hover:text-primary">Submission</a></li>
+          <li><a href="publications.html" class="text-primary font-semibold">Publications</a></li>
+          <li><a href="registration.html" class="hover:text-primary">Registrations</a></li>
+          <li><a href="downloads.html" class="hover:text-primary">Downloads</a></li>
+          <li><a href="committee.html" class="hover:text-primary">Committee</a></li>
+          <li><a href="partners.html" class="hover:text-primary">Partners</a></li>
+          <li><a href="speakers.html" class="hover:text-primary">Speakers</a></li>
+          <li><a href="sponsorship.html" class="hover:text-primary">Sponsorship</a></li>
+          <li><a href="special-sessions.html" class="hover:text-primary">Special Sessions</a></li>
+          <li><a href="venue.html" class="hover:text-primary">Venue</a></li>
+          <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+        </ul>
+
+        <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
+      </div>
+
+      <div id="mobileMenu" class="hidden lg:hidden pb-4">
+        <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="call-for-papers.html">Call for Papers</a></li>
+          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="registration.html">Registrations</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="committee.html">Committee</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="sponsorship.html">Sponsorship</a></li>
+          <li><a href="special-sessions.html">Special Sessions</a></li>
+          <li><a href="venue.html">Venue</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="bg-primary text-white py-28 text-center fade-section">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Publications</h1>
+  <p class="text-white/90 text-lg md:text-xl">
+    Conference proceedings and journal publication opportunities
+  </p>
+</section>
+
+<!-- ================= PUBLICATION PARTNERS ================= -->
+<section class="py-24 bg-white fade-section">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+    <h2 class="text-3xl font-bold text-primary mb-16">
+      Publication Partners
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="partner-card">
+        <img src="assets/images/scopus.png" class="mx-auto h-20">
+      </div>
+
+      <div class="partner-card">
+        <img src="assets/images/springer.png" class="mx-auto h-24">
+      </div>
+
+      <div class="partner-card">
+        <img src="assets/images/wos.png" class="mx-auto h-20">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PUBLICATION DETAILS ================= -->
+<section class="py-24 bg-gray-50 fade-section">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="modern-card text-center">
+
+      <h3 class="text-2xl font-bold text-primary mb-6">
+        Conference Publication
+      </h3>
+
+      <p class="text-gray-700 mb-12 leading-relaxed text-lg">
+        All accepted and presented papers will be recommended for publication in
+        <span class="font-semibold">SPRINGER Conference Proceedings (SCOPUS Indexed)</span>
+        subject to publisher terms and quality guidelines.
+      </p>
+
+      <div class="border-t border-gray-200 my-10"></div>
+
+      <h3 class="text-2xl font-bold text-primary mb-6">
+        Journal Publication
+      </h3>
+
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Authors interested in journal publication may submit extended versions of their work to associated journals.
+        <br><br>
+        <span class="font-semibold">
+          (Article Processing Charges will apply as per journal norms.)
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  const sections = document.querySelectorAll(".fade-section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gradient-to-r from-[#0b1e6b] to-[#08134a] text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Top Grid -->
+    <div class="grid md:grid-cols-4 gap-10 mb-10">
+
+      <!-- Column 1 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">ICSCIS 2026</h3>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          2nd International Conference on Sustainable Computing and Intelligent Systems
+        </p>
+        <p class="text-sm text-gray-300 mt-3">
+          June 26-27, 2026
+        </p>
+      </div>
+
+      <!-- Column 2 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="call-for-papers.html" class="hover:text-white transition">Call for Papers</a></li>
+          <li><a href="submission.html" class="hover:text-white transition">Submission</a></li>
+          <li><a href="registration.html" class="hover:text-white transition">Registration</a></li>
+          <li><a href="committee.html" class="hover:text-white transition">Committee</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Information</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="publications.html" class="hover:text-white transition">Publications</a></li>
+          <li><a href="speakers.html" class="hover:text-white transition">Speakers</a></li>
+          <li><a href="sponsorship.html" class="hover:text-white transition">Sponsorship</a></li>
+          <li><a href="venue.html" class="hover:text-white transition">Venue</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li>✉ saurabh.shandilya@poornima.edu.in</li>
+          <li>✉ udit.mamodya@poornima.edu.in</li>
+          <li>📞 +91-9887587811</li>
+          <li>📞 +91-7014977762</li>
+          <li>📍 Jaipur, Rajasthan, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <!-- Divider -->
+<div class="border-t border-blue-800 pt-6 mt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
+
+  <p>© 2026 Poornima University. All rights reserved.</p>
+
+  <div class="text-center md:text-right mt-3 md:mt-0">
+    <p>Developed by Bhumika Aggarwal (Student), Poornima University</p>
+    <p>Developed by Bhavya Agrawal (Student), Poornima University</p>
+  </div>
+
+</div>
+  </div>
+</footer>
+</body>
+</html>
