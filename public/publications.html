@@ -4,19 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Publications | ICSCIS 2026</title>
-<link href="assets/css/output.css" rel="stylesheet">
+
+<link href="/assets/css/output.css" rel="stylesheet">
 
 <style>
-/* Page Fade */
-body {
-  animation: fadePage 0.8s ease-in-out;
-}
+body { animation: fadePage 0.8s ease-in-out; }
+
 @keyframes fadePage {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Scroll Animation */
 .fade-section {
   opacity: 0;
   transform: translateY(40px);
@@ -27,7 +25,6 @@ body {
   transform: translateY(0);
 }
 
-/* Cards */
 .modern-card {
   background: white;
   border-radius: 20px;
@@ -62,203 +59,180 @@ body {
 
 <body class="bg-gray-100 text-gray-800">
 
-<!-- ================= HEADER ================= -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <img src="assets/images/PU_Logo.png" class="h-12">
-    <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary">Scopus Indexed</div>
-    </div>
-  </div>
-  <nav class="border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-3">
+<!-- Header -->
+<div id="header-placeholder"></div>
 
-        <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
-          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
-          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
-        </ul>
-
-        <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-
-      </div>
-
-      <div id="mobileMenu" class="hidden lg:hidden pb-4">
-        <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="registration.html">Registrations</a></li>
-          <li><a href="downloads.html">Downloads</a></li>
-          <li><a href="committee.html">Committee</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="sponsorship.html">Sponsorship</a></li>
-          <li><a href="special-sessions.html">Special Sessions</a></li>
-          <li><a href="venue.html">Venue</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-</header>
-
-<!-- ================= SLIDER HERO ================= -->
+<!-- ================= HERO ================= -->
 <section class="pt-20 pb-8 bg-gray-100 fade-section">
-  <div class="max-w-5xl mx-auto px-6 relative">
+<div class="max-w-5xl mx-auto px-6 relative">
 
-    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-      <div class="slider relative w-full h-72 md:h-[450px]">
+<div class="relative rounded-3xl overflow-hidden shadow-2xl">
+<div class="slider relative w-full h-72 md:h-[450px]">
 
-        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
-          <img src="assets/images/building.avif" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+<img src="/assets/images/building.avif" class="w-full h-full object-cover">
+</div>
 
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="assets/images/poornima 3.webp" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+<img src="/assets/images/poornima 3.webp" class="w-full h-full object-cover">
+</div>
 
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="assets/images/footercover.webp" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+<img src="/assets/images/footercover.webp" class="w-full h-full object-cover">
+</div>
 
-      </div>
-      <div class="absolute inset-0 bg-black/10"></div>
-    </div>
+</div>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
 
-    <!-- White Title Card -->
-    <div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-5 text-center">
-      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
-        Publications
-      </h2>
-      <p class="text-base md:text-lg text-gray-500 mb-2">
-        Conference proceedings and journal publication opportunities
-      </p>
-      <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
-    </div>
+<div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-5 text-center">
+<h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
+Publications
+</h2>
+<p class="text-gray-500">
+Conference proceedings and journal publication opportunities
+</p>
+<div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+</div>
 
-  </div>
+</div>
 </section>
 
 <!-- ================= PUBLICATION PARTNERS ================= -->
 <section class="py-24 bg-white fade-section">
-  <div class="max-w-6xl mx-auto px-6 text-center">
+<div class="max-w-6xl mx-auto px-6 text-center">
 
-    <h2 class="text-3xl font-bold text-primary mb-16">
-      Publication Partners
-    </h2>
+<h2 class="text-3xl font-bold text-primary mb-16">
+Publication Partners
+</h2>
 
 <div class="flex justify-center">
-
-  <div class="partner-card flex items-center justify-center w-full max-w-xl h-56">
-    <img src="assets/images/scopus.png" 
+<div class="partner-card flex items-center justify-center w-full max-w-xl h-56">
+<img src="/assets/images/scopus.png"
      class="mx-auto max-h-44 w-auto object-contain">
-  </div>
-
+</div>
 </div>
 
-    </div>
-
-  </div>
+</div>
 </section>
 
 <!-- ================= PUBLICATION DETAILS ================= -->
 <section class="py-24 bg-gray-50 fade-section">
-  <div class="max-w-5xl mx-auto px-6">
+<div class="max-w-5xl mx-auto px-6">
 
-    <div class="modern-card text-center">
+<div class="modern-card text-center">
 
-      <h3 class="text-2xl font-bold text-primary mb-6">
-        Conference Publication
-      </h3>
+<h3 class="text-2xl font-bold text-primary mb-6">
+Conference Publication
+</h3>
 
-      <p class="text-gray-700 mb-12 leading-relaxed text-lg">
-        All accepted and presented papers will be recommended for publication in
-        <span class="font-semibold">AIP Conference Proceedings (SCOPUS Indexed)</span>
-        subject to publisher terms and quality guidelines.
-      </p>
+<p class="text-gray-700 mb-12 leading-relaxed text-lg">
+All accepted and presented papers will be recommended for publication in
+<span class="font-semibold">AIP Conference Proceedings (SCOPUS Indexed)</span>
+subject to publisher terms and quality guidelines.
+</p>
 
-      <div class="border-t border-gray-200 my-10"></div>
+<div class="border-t border-gray-200 my-10"></div>
 
-      <h3 class="text-2xl font-bold text-primary mb-6">
-        Journal Publication
-      </h3>
+<h3 class="text-2xl font-bold text-primary mb-6">
+Journal Publication
+</h3>
 
-      <p class="text-gray-700 leading-relaxed text-lg">
-        Authors interested in journal publication may submit extended versions of their work to associated journals.
-        <br><br>
-        <span class="font-semibold">
-          (Article Processing Charges will apply as per journal norms.)
-        </span>
-      </p>
+<p class="text-gray-700 leading-relaxed text-lg">
+Authors interested in journal publication may submit extended versions of their work to associated journals.
+<br><br>
+<span class="font-semibold">
+(Article Processing Charges will apply as per journal norms.)
+</span>
+</p>
 
-    </div>
+</div>
 
-  </div>
+</div>
 </section>
 
 <!-- ================= FOOTER ================= -->
+
 <div id="footer-placeholder"></div>
 
 <script>
+fetch("components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    const placeholder = document.getElementById("footer-placeholder");
+    placeholder.innerHTML = data;
+
+    // Small delay so CSS applies first
+    setTimeout(() => {
+      const footer = placeholder.querySelector(".footer");
+      footer.classList.add("show-footer");
+    }, 100);
+  });
+</script>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* Slider */
-  const sliders = document.querySelectorAll(".slider");
-  sliders.forEach((slider) => {
-    const slides = slider.querySelectorAll(".slide");
-    let current = 0;
+  // Load Header
+  fetch("/components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
 
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage) {
+          link.classList.add("text-primary", "font-semibold");
+        }
+      });
+    });
+
+  /* MOBILE MENU */
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Slider
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+  if (slides.length > 0) {
     setInterval(() => {
       slides[current].classList.remove("opacity-100");
       slides[current].classList.add("opacity-0");
-
       current = (current + 1) % slides.length;
-
       slides[current].classList.remove("opacity-0");
       slides[current].classList.add("opacity-100");
     }, 4000);
-  });
+  }
 
-  /* Scroll Animation */
+  // Scroll animation
   const sections = document.querySelectorAll(".fade-section");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
+      if (entry.isIntersecting) entry.target.classList.add("show");
     });
   }, { threshold: 0.15 });
 
   sections.forEach(section => observer.observe(section));
-});
 
-/* Footer Load */
-fetch("components/footer.html")
-.then(response => response.text())
-.then(data => {
-  const placeholder = document.getElementById("footer-placeholder");
-  placeholder.innerHTML = data;
-  setTimeout(() => {
-    const footer = placeholder.querySelector(".footer");
-    if (footer) footer.classList.add("show-footer");
-  }, 100);
 });
 </script>
 

@@ -80,68 +80,7 @@ html { scroll-behavior: smooth; }
 <body class="bg-gray-50 text-gray-800">
 
 <!-- NAVBAR -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-4">
-      <img src="assets/images/PU_Logo.png"
-           alt="Poornima University"
-           class="h-12">
-    </div>
-
-    <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary hover:text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary hover:text-primary">Scopus Indexed</div>
-    </div>
-  </div>
-
-  <nav class="border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-3">
-
-        <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary">About</a></li>
-          <li><a href="call-for-papers.html" class="text-primary font-semibold">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary">Submission</a></li>
-          <li><a href="publications.html" class="hover:text-primary">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
-        </ul>
-
-        <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-
-      </div>
-
-      <div id="mobileMenu" class="hidden lg:hidden pb-4">
-       <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="registration.html">Registrations</a></li>
-          <li><a href="downloads.html">Downloads</a></li>
-          <li><a href="committee.html">Committee</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="sponsorship.html">Sponsorship</a></li>
-          <li><a href="special-sessions.html">Special Sessions</a></li>
-          <li><a href="venue.html">Venue</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-</header>
+<div id="header-placeholder"></div>
 
 
 <!-- ================= HERO ================= -->
@@ -614,6 +553,31 @@ fetch("components/footer.html")
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Header
+  fetch("/components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage) {
+          link.classList.add("text-primary", "font-semibold");
+        }
+      });
+    });
 
   /* MOBILE MENU */
   const menuBtn = document.getElementById("menuBtn");
@@ -625,15 +589,7 @@ fetch("components/footer.html")
     });
   }
 
-  /* FOOTER LOAD */
-  fetch("components/footer.html")
-    .then(response => response.text())
-    .then(data => {
-      const placeholder = document.getElementById("footer-placeholder");
-      if (placeholder) {
-        placeholder.innerHTML = data;
-      }
-    });
+  
 
   /* COMMITTEE CARD SCROLL */
   const cards = document.querySelectorAll(".committee-card");

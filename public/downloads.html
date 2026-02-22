@@ -56,65 +56,7 @@ body {
 <body class="bg-gray-100 text-gray-800">
 
 <!-- ================= HEADER ================= -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-4">
-      <img src="assets/images/PU_Logo.png" alt="Poornima University" class="h-12">
-    </div>
-
-    <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary">Scopus Indexed</div>
-    </div>
-  </div>
-
-  <nav class="border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-3">
-
-        <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
-          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
-          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
-        </ul>
-
-        <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-      </div>
-
-      <div id="mobileMenu" class="hidden lg:hidden pb-4">
-         <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html">Submission</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="registration.html">Registrations</a></li>
-          <li><a href="downloads.html">Downloads</a></li>
-          <li><a href="committee.html">Committee</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="sponsorship.html">Sponsorship</a></li>
-          <li><a href="special-sessions.html">Special Sessions</a></li>
-          <li><a href="venue.html">Venue</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-</header>
+<div id="header-placeholder"></div>
 
 <!-- ================= TOP SLIDER SECTION ================= -->
 <section class="pt-20 pb-8 bg-gray-100 fade-section">
@@ -224,7 +166,31 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileMenu.classList.toggle("hidden");
     });
   }
+  // Header
+  fetch("/components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
 
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage) {
+          link.classList.add("text-primary", "font-semibold");
+        }
+      });
+    });
   /* Slider */
   const sliders = document.querySelectorAll(".slider");
   sliders.forEach((slider) => {

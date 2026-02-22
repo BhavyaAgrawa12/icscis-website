@@ -4,46 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paper Submission | ICSCIS 2026</title>
-<link href="assets/css/output.css" rel="stylesheet">
+
+<!-- Tailwind -->
+<link href="/assets/css/output.css" rel="stylesheet">
 
 <style>
-/* Page Fade */
-body {
-  animation: fadePage 0.8s ease-in-out;
-}
+body { animation: fadePage 0.8s ease-in-out; }
 
 @keyframes fadePage {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Scroll Animation */
 .fade-section {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
-
 .fade-section.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Clean Cards */
 .card-clean {
   background: #ffffff;
   border-radius: 20px;
   padding: 50px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.05);
   transition: all 0.4s ease;
+  border: 1px solid transparent;
 }
-
 .card-clean:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(30,58,138,0.12);
+  border-color: #1e3a8a;
 }
 
-/* Button */
 .btn-primary {
   background: #1e3a8a;
   color: white;
@@ -52,129 +48,56 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
 }
-
 .btn-primary:hover {
   background: #162d6d;
   transform: scale(1.05);
 }
 
-/* Table */
-table td {
-  padding: 14px 18px;
-}
-table tr:nth-child(even) {
-  background: #f8fafc;
-}
-table tr:hover {
-  background: #eef2ff;
-}
-.card-clean {
-  border: 1px solid transparent;
-}
-
-.card-clean:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(30,58,138,0.12);
-  border-color: #1e3a8a;
-}
+table td { padding: 14px 18px; }
+table tr:nth-child(even) { background: #f8fafc; }
+table tr:hover { background: #eef2ff; }
 </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
-<!-- ================= HEADER ================= -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <img src="assets/images/PU_Logo.png" class="h-12">
-    <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary">Scopus Indexed</div>
-    </div>
-  </div>
-  <nav class="border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-3">
+<!-- Header -->
+<div id="header-placeholder"></div>
 
-        <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
-          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
-          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
-        </ul>
-
-        <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-
-      </div>
-
-      <div id="mobileMenu" class="hidden lg:hidden pb-4">
-        <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html" class="text-primary font-semibold">Submission</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="registration.html">Registrations</a></li>
-          <li><a href="downloads.html">Downloads</a></li>
-          <li><a href="committee.html">Committee</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="sponsorship.html">Sponsorship</a></li>
-          <li><a href="special-sessions.html">Special Sessions</a></li>
-          <li><a href="venue.html">Venue</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-</header>
-
-<!-- ================= SLIDER HERO ================= -->
+<!-- ================= HERO ================= -->
 <section class="pt-20 pb-8 bg-gray-100 fade-section">
+<div class="max-w-5xl mx-auto px-6 relative">
 
-  <div class="max-w-5xl mx-auto px-6 relative">
+<div class="relative rounded-3xl overflow-hidden shadow-2xl">
+<div class="slider relative w-full h-72 md:h-[450px]">
 
-    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-      <div class="slider relative w-full h-72 md:h-[450px]">
+<div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+<img src="/assets/images/building.avif" class="w-full h-full object-cover">
+</div>
 
-        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
-          <img src="assets/images/building.avif" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+<img src="/assets/images/poornima 3.webp" class="w-full h-full object-cover">
+</div>
 
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="assets/images/poornima 3.webp" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+<img src="/assets/images/footercover.webp" class="w-full h-full object-cover">
+</div>
 
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="assets/images/footercover.webp" class="w-full h-full object-cover">
-        </div>
+</div>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
 
-      </div>
-      <div class="absolute inset-0 bg-black/10"></div>
-    </div>
+<div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-6 text-center">
+<h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
+Paper Submission
+</h2>
+<p class="text-gray-500">
+Submit your research papers for ICSCIS 2026
+</p>
+<div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full mt-3"></div>
+</div>
 
-    <!-- White Title Card -->
-    <div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-5 text-center">
-      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
-        Paper Submission
-      </h2>
-      <p class="text-base md:text-lg text-gray-500 mb-2">
-        Submit your research papers for ICSCIS 2026
-      </p>
-      <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
-    </div>
-
-  </div>
+</div>
 </section>
 
 <!-- ================= CONTENT ================= -->
@@ -183,141 +106,175 @@ table tr:hover {
 
 <!-- Guidelines -->
 <div class="card-clean">
-<h2 class="text-2xl font-bold text-primary mb-6">Paper Submission Guidelines</h2>
-<h3 class="font-semibold text-gray-900 mb-3">Instructions:</h3>
-<ul class="space-y-2 text-sm text-gray-700">
-        <li>• Kindly use the Full Paper Template provided by the journal/website (in the Download tab) for formatting your paper.</li>
-        <li>• The paper should be original and should not have been submitted anywhere/published else or be under review for any journal or other conferences.</li>
-        <li>• The plagiarism should be less than 10%.</li>
-        <li>• The full article must be submitted as a MS Word file in DOC or DOCX format.</li>
-        <li>• Before submitting your paper, please ensure that the English used is clear, concise and coherent. This is especially important if English is not your first language.</li>
-      </ul>
+<h2 class="text-2xl font-bold text-primary mb-6">
+Paper Submission Guidelines
+</h2>
 
-<h3 class="font-semibold text-gray-900 mt-8 mb-3">NOTE:</h3>
-<p class="text-gray-700 text-justify">
-At least one author must register for inclusion. Only registered & presented papers will be processed for publication.
-<span class="font-semibold">No paper to have more than six authors.</span>
+<ul class="space-y-2 text-sm text-gray-700">
+<li>• Kindly use the Full Paper Template provided in the Downloads tab.</li>
+<li>• Paper must be original and not under review elsewhere.</li>
+<li>• Plagiarism must be below 10%.</li>
+<li>• Submit full article in DOC or DOCX format.</li>
+<li>• Ensure clear and professional English language.</li>
+</ul>
+
+<p class="mt-6 text-gray-700">
+At least one author must register. Only registered and presented papers will be processed for publication.
+<span class="font-semibold">Maximum six authors per paper.</span>
 </p>
 </div>
 
-<!-- Two Column Section -->
+<!-- Two Columns -->
 <div class="grid md:grid-cols-2 gap-12">
 
 <div class="card-clean">
 <h3 class="text-xl font-bold text-primary mb-4">How to Submit?</h3>
 <p class="text-gray-700 mb-6">
-Perspective authors shall submit full-length manuscripts via the submission link.
+Authors must submit full-length manuscripts via the submission portal.
 </p>
 
 <div class="flex justify-center mb-6">
 <a href="#" class="btn-primary">Submit Your Paper</a>
 </div>
 
-<p class="text-gray-700 text-justify">
-          Authors will receive notification from the conference once the Technical Program Committee has reviewed the manuscript. <span class="font-semibold">. The committee accepts only full-length papers for review not the abstracts.</span>
-        </p>
+<p class="text-gray-700">
+Only full-length papers are accepted for review. Abstract-only submissions are not considered.
+</p>
 </div>
 
 <div class="card-clean">
-<h3 class="text-xl font-bold text-primary mb-4">Review Process & Presentation</h3>
-<p class="text-gray-700 mb-4 text-justify">
-<span class="font-semibold">All papers with a similarity score of less than 10% will undergo a double-blind review.</span> The technical committee of the conference will review the papers, and the authors will be notified of the paper status, which can be one of the following:
+<h3 class="text-xl font-bold text-primary mb-4">
+Review Process
+</h3>
+
+<p class="text-gray-700 mb-4">
+All papers below 10% similarity will undergo double-blind review.
 </p>
 
 <ul class="space-y-2 text-gray-700">
-          <li>• Accepted for oral presentation</li>
-          <li>• Accepted with minor corrections for Oral Presentation</li>
-          <li>• Rejected</li>
-        </ul>
+<li>• Accepted for oral presentation</li>
+<li>• Accepted with minor corrections</li>
+<li>• Rejected</li>
+</ul>
 </div>
 
 </div>
 
 <!-- Important Dates -->
 <div class="card-clean">
-<h3 class="text-xl font-bold text-primary mb-6">Important Dates:</h3>
-      <div class="overflow-x-auto">
-        <table class="w-full border border-gray-300">
-          <tbody>
-            <tr class="border-b">
-              <td class="font-semibold">Full Paper Submission up to</td>
-              <td>July 31, 2026</td>
-            </tr>
-            <tr class="border-b">
-              <td class="font-semibold">Notification of Acceptance</td>
-              <td>August 20, 2026</td>
-            </tr>
-            <tr class="border-b">
-              <td class="font-semibold">Revised Paper Submission (if accepted)</td>
-              <td>August 31, 2026</td>
-            </tr>
-            <tr class="border-b">
-              <td class="font-semibold">Early Bird Registration</td>
-              <td>September 5, 2026</td>
-            </tr>
-            <tr class="border-b">
-              <td class="font-semibold">Late Registration</td>
-              <td>September 15, 2026</td>
-            </tr>
-            <tr>
-              <td class="font-semibold">Conference Dates</td>
-              <td>September 25-26, 2026</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<h3 class="text-xl font-bold text-primary mb-6">
+Important Dates
+</h3>
 
+<div class="overflow-x-auto">
+<table class="w-full border border-gray-300">
+<tbody>
+<tr class="border-b">
+<td class="font-semibold">Full Paper Submission</td>
+<td>July 31, 2026</td>
+</tr>
+<tr class="border-b">
+<td class="font-semibold">Notification of Acceptance</td>
+<td>August 20, 2026</td>
+</tr>
+<tr class="border-b">
+<td class="font-semibold">Revised Submission</td>
+<td>August 31, 2026</td>
+</tr>
+<tr class="border-b">
+<td class="font-semibold">Early Bird Registration</td>
+<td>September 5, 2026</td>
+</tr>
+<tr>
+<td class="font-semibold">Conference Dates</td>
+<td>September 25–26, 2026</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
+
 <div id="footer-placeholder"></div>
 
 <script>
+fetch("components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    const placeholder = document.getElementById("footer-placeholder");
+    placeholder.innerHTML = data;
+
+    // Small delay so CSS applies first
+    setTimeout(() => {
+      const footer = placeholder.querySelector(".footer");
+      footer.classList.add("show-footer");
+    }, 100);
+  });
+</script>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
-/* Slider */
-const sliders = document.querySelectorAll(".slider");
-sliders.forEach((slider) => {
-const slides = slider.querySelectorAll(".slide");
-let current = 0;
+  // Load Header
+  fetch("/components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
 
-setInterval(() => {
-slides[current].classList.remove("opacity-100");
-slides[current].classList.add("opacity-0");
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
 
-current = (current + 1) % slides.length;
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
 
-slides[current].classList.remove("opacity-0");
-slides[current].classList.add("opacity-100");
-}, 4000);
-});
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
 
-/* Scroll Animation */
-const sections = document.querySelectorAll(".fade-section");
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add("show");
-}
-});
-}, { threshold: 0.15 });
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage) {
+          link.classList.add("text-primary", "font-semibold");
+        }
+      });
+    });
 
-sections.forEach(section => observer.observe(section));
-});
 
-/* Footer Load */
-fetch("components/footer.html")
-.then(response => response.text())
-.then(data => {
-const placeholder = document.getElementById("footer-placeholder");
-placeholder.innerHTML = data;
-setTimeout(() => {
-const footer = placeholder.querySelector(".footer");
-if (footer) footer.classList.add("show-footer");
-}, 100);
+
+  // Slider
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+
+  if (slides.length > 0) {
+    setInterval(() => {
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+      current = (current + 1) % slides.length;
+      slides[current].classList.remove("opacity-0");
+      slides[current].classList.add("opacity-100");
+    }, 4000);
+  }
+
+  // Scroll animation
+  const sections = document.querySelectorAll(".fade-section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+
 });
 </script>
 

@@ -4,19 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Registration | ICSCIS 2026</title>
-<link href="assets/css/output.css" rel="stylesheet">
+
+<link href="/assets/css/output.css" rel="stylesheet">
 
 <style>
-/* Page Fade */
-body {
-  animation: fadePage 0.8s ease-in-out;
-}
+body { animation: fadePage 0.8s ease-in-out; }
+
 @keyframes fadePage {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Scroll Animation */
 .fade-section {
   opacity: 0;
   transform: translateY(40px);
@@ -27,7 +25,6 @@ body {
   transform: translateY(0);
 }
 
-/* Card Style */
 .modern-card {
   background: white;
   border-radius: 20px;
@@ -48,160 +45,103 @@ table tbody tr:hover {
 
 <body class="bg-gray-100 text-gray-800">
 
-<!-- ================= HEADER ================= -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <img src="assets/images/PU_Logo.png" class="h-12">
-    <div class="hidden md:flex gap-6 text-sm font-semibold">
-      <div class="text-primary">AIP Conference Proceedings</div>
-      <div class="text-primary">Scopus Indexed</div>
-    </div>
-  </div>
-   <nav class="border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-3">
+<!-- Header -->
+<div id="header-placeholder"></div>
 
-        <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-primary transition">About</a></li>
-          <li><a href="call-for-papers.html" class="hover:text-primary transition">Call for Papers</a></li>
-          <li><a href="submission.html" class="hover:text-primary transition">Submission</a></li>
-          <li><a href="publications.html" class="hover:text-primary transition">Publications</a></li>
-          <li><a href="registration.html" class="hover:text-primary transition">Registrations</a></li>
-          <li><a href="downloads.html" class="hover:text-primary transition">Downloads</a></li>
-          <li><a href="committee.html" class="hover:text-primary transition">Committee</a></li>
-          <li><a href="partners.html" class="hover:text-primary transition">Partners</a></li>
-          <li><a href="speakers.html" class="hover:text-primary transition">Speakers</a></li>
-          <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
-          <li><a href="special-sessions.html" class="hover:text-primary transition">Special Sessions</a></li>
-          <li><a href="venue.html" class="hover:text-primary transition">Venue</a></li>
-          <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
-        </ul>
-
-        <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl">☰</button>
-      </div>
-
-      <div id="mobileMenu" class="hidden lg:hidden pb-4">
-         <ul class="flex flex-col gap-3 text-sm font-medium text-gray-700">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="call-for-papers.html">Call for Papers</a></li>
-          <li><a href="submission.html">Submission</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="registration.html">Registrations</a></li>
-          <li><a href="downloads.html">Downloads</a></li>
-          <li><a href="committee.html">Committee</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="sponsorship.html">Sponsorship</a></li>
-          <li><a href="special-sessions.html">Special Sessions</a></li>
-          <li><a href="venue.html">Venue</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-</header>
-
-<!-- ================= SLIDER HERO ================= -->
+<!-- ================= HERO ================= -->
 <section class="pt-20 pb-8 bg-gray-100 fade-section">
-  <div class="max-w-5xl mx-auto px-6 relative">
+<div class="max-w-5xl mx-auto px-6 relative">
 
-    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-      <div class="slider relative w-full h-72 md:h-[450px]">
+<div class="relative rounded-3xl overflow-hidden shadow-2xl">
+<div class="slider relative w-full h-72 md:h-[450px]">
 
-        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
-          <img src="assets/images/building.avif" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+<img src="/assets/images/building.avif" class="w-full h-full object-cover">
+</div>
 
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="assets/images/poornima 3.webp" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+<img src="/assets/images/poornima 3.webp" class="w-full h-full object-cover">
+</div>
 
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="assets/images/footercover.webp" class="w-full h-full object-cover">
-        </div>
+<div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+<img src="/assets/images/footercover.webp" class="w-full h-full object-cover">
+</div>
 
-      </div>
-      <div class="absolute inset-0 bg-black/10"></div>
-    </div>
+</div>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
 
-    <!-- White Title Card -->
-    <div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-5 text-center">
-      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
-        Registration
-      </h2>
-      <p class="text-base md:text-lg text-gray-500 mb-2">
-        Register for ICSCIS 2026 Conference
-      </p>
-      <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
-    </div>
+<div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-5 text-center">
+<h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
+Registration
+</h2>
+<p class="text-gray-500">
+Register for ICSCIS 2026 Conference
+</p>
+<div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+</div>
 
-  </div>
+</div>
 </section>
 
-<!-- ===== REGISTRATION DATES ===== -->
+<!-- ================= CONTENT ================= -->
+
 <section class="py-16 fade-section">
-  <div class="max-w-6xl mx-auto px-6">
+<div class="max-w-6xl mx-auto px-6">
+<div class="bg-blue-100 p-8 rounded-2xl modern-card">
+<h3 class="text-2xl font-bold text-primary mb-8">Registration Dates</h3>
 
-    <div class="bg-blue-100 p-8 rounded-2xl modern-card">
-      <h3 class="text-2xl font-bold text-primary mb-8">Registration Dates</h3>
+<div class="grid md:grid-cols-2 gap-10">
+<div>
+<h4 class="font-semibold text-lg mb-2">Early Bird Registration</h4>
+<p class="text-gray-600">5 September, 2026</p>
+</div>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <div>
-          <h4 class="font-semibold text-lg mb-2">Early Bird Registration</h4>
-          <p class="text-gray-600">5 September, 2026</p>
-        </div>
+<div>
+<h4 class="font-semibold text-lg mb-2">Last Registration</h4>
+<p class="text-gray-600">15 September, 2026</p>
+</div>
+</div>
 
-        <div>
-          <h4 class="font-semibold text-lg mb-2">Last Registration</h4>
-          <p class="text-gray-600">15 September, 2026</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
+</div>
+</div>
 </section>
 
-
-<!-- ===== PUBLICATION FEES ===== -->
 <section class="py-16 bg-white fade-section">
-  <div class="max-w-7xl mx-auto px-6">
+<div class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center text-primary mb-10">Registration Categories</h2>
+<h2 class="text-3xl font-bold text-center text-primary mb-10">
+Registration Categories
+</h2>
 
-    <div class="bg-gray-50 p-8 rounded-2xl modern-card overflow-x-auto">
+<div class="bg-gray-50 p-8 rounded-2xl modern-card overflow-x-auto">
 
-      <h3 class="text-xl font-bold text-primary mb-6">Publication Fees</h3>
+<h3 class="text-xl font-bold text-primary mb-6">
+Publication Fees
+</h3>
 
-      <table class="w-full border border-gray-300 text-sm text-center">
-        <thead class="bg-gray-200 text-gray-900">
-          <tr>
-            <th class="border p-3">CATEGORY</th>
-            <th class="border p-3">EARLY BIRD</th>
-            <th class="border p-3">LATE REGISTRATION</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border p-3 text-left">Faculty Member (ACM/IEEE/FIP)</td><td class="border p-3">INR 9000</td><td class="border p-3">INR 9500</td></tr>
-          <tr><td class="border p-3 text-left">Faculty (ACM/IEEE/FIP) with International Co-author</td><td class="border p-3">INR 9000</td><td class="border p-3">INR 9500</td></tr>
-          <tr><td class="border p-3 text-left">Faculty International Author and Member (ACM/IEEE/FIP)</td><td class="border p-3">$150</td><td class="border p-3">$190</td></tr>
-          <tr><td class="border p-3 text-left">Faculty Non-Member (ACM/IEEE/FIP)</td><td class="border p-3">INR 10000</td><td class="border p-3">INR 10500</td></tr>
-          <tr><td class="border p-3 text-left">Faculty Non-Member with International Co-author</td><td class="border p-3">INR 10000</td><td class="border p-3">INR 11000</td></tr>
-          <tr><td class="border p-3 text-left">International Author Non-Member</td><td class="border p-3">$180</td><td class="border p-3">$220</td></tr>
-          <tr><td class="border p-3 text-left">Corporate/Industry Professional</td><td class="border p-3">INR 11000</td><td class="border p-3">INR 11500</td></tr>
-          <tr><td class="border p-3 text-left">PG / PhD Student</td><td class="border p-3">INR 8500</td><td class="border p-3">INR 9000</td></tr>
-          <tr><td class="border p-3 text-left">Attendee</td><td class="border p-3">INR 1500</td><td class="border p-3">INR 2000</td></tr>
-        </tbody>
-      </table>
+<table class="w-full border border-gray-300 text-sm text-center">
+<thead class="bg-gray-200">
+<tr>
+<th class="border p-3">Category</th>
+<th class="border p-3">Early Bird</th>
+<th class="border p-3">Late Registration</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="border p-3 text-left">Faculty Member (ACM/IEEE/FIP)</td><td class="border p-3">INR 9000</td><td class="border p-3">INR 9500</td></tr>
+<tr><td class="border p-3 text-left">Faculty Non-Member</td><td class="border p-3">INR 10000</td><td class="border p-3">INR 10500</td></tr>
+<tr><td class="border p-3 text-left">International Author</td><td class="border p-3">$150</td><td class="border p-3">$190</td></tr>
+<tr><td class="border p-3 text-left">Corporate / Industry Professional</td><td class="border p-3">INR 11000</td><td class="border p-3">INR 11500</td></tr>
+<tr><td class="border p-3 text-left">PG / PhD Student</td><td class="border p-3">INR 8500</td><td class="border p-3">INR 9000</td></tr>
+<tr><td class="border p-3 text-left">Attendee</td><td class="border p-3">INR 1500</td><td class="border p-3">INR 2000</td></tr>
+</tbody>
+</table>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
-
-<!-- ===== ACCOUNT DETAILS ===== -->
 <section class="py-16 fade-section">
   <div class="max-w-6xl mx-auto px-6">
 
@@ -243,85 +183,82 @@ table tbody tr:hover {
 </section>
 
 <!-- ================= FOOTER ================= -->
+
 <div id="footer-placeholder"></div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* Mobile Menu */
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-
-  /* Slider */
-  const sliders = document.querySelectorAll(".slider");
-  sliders.forEach((slider) => {
-    const slides = slider.querySelectorAll(".slide");
-    let current = 0;
-
-    setInterval(() => {
-      slides[current].classList.remove("opacity-100");
-      slides[current].classList.add("opacity-0");
-
-      current = (current + 1) % slides.length;
-
-      slides[current].classList.remove("opacity-0");
-      slides[current].classList.add("opacity-100");
-    }, 4000);
-  });
-
-  /* Scroll Section Animation */
-  const sections = document.querySelectorAll(".fade-section");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  sections.forEach(section => observer.observe(section));
-
-  /* Card Stagger Animation */
-  const cards = document.querySelectorAll(".card-animate");
-
-  const cardObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        cards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add("show");
-          }, index * 150);
-        });
-      }
-    });
-  }, { threshold: 0.2 });
-
-  if (cards.length > 0) {
-    cardObserver.observe(cards[0]);
-  }
-
-});
-
-/* Footer Load */
 fetch("components/footer.html")
   .then(response => response.text())
   .then(data => {
     const placeholder = document.getElementById("footer-placeholder");
     placeholder.innerHTML = data;
 
+    // Small delay so CSS applies first
     setTimeout(() => {
       const footer = placeholder.querySelector(".footer");
-      if (footer) footer.classList.add("show-footer");
+      footer.classList.add("show-footer");
     }, 100);
   });
 </script>
 
+<!-- ================= SCRIPTS ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Header
+  fetch("/components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage) {
+          link.classList.add("text-primary", "font-semibold");
+        }
+      });
+    });
+
+  
+ 
+
+  // Slider
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+  if (slides.length > 0) {
+    setInterval(() => {
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+      current = (current + 1) % slides.length;
+      slides[current].classList.remove("opacity-0");
+      slides[current].classList.add("opacity-100");
+    }, 4000);
+  }
+
+  // Scroll animation
+  const sections = document.querySelectorAll(".fade-section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+
+});
+</script>
 
 </body>
 </html>
