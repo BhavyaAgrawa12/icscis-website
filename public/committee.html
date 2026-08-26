@@ -121,6 +121,25 @@
       gap: 40px;
     }
 
+    .general-chairs-grid .john-damilakis-card {
+      grid-column: 2;
+    }
+
+    @media (max-width: 767px) {
+      .general-chairs-grid .committee-card {
+        order: 0;
+      }
+
+      .general-chairs-grid .john-damilakis-card {
+        grid-column: auto;
+        order: 3;
+      }
+
+      .general-chairs-grid .issam-naqa-card {
+        order: 4;
+      }
+    }
+
     /* 🔥 CARD (ANIMATED PROPERLY) */
     .committee-card {
       background: #ffffff;
@@ -216,20 +235,12 @@
         <div class="absolute inset-0 bg-black/10"></div>
       </div>
 
-      <div class="relative mt-8 w-fit mx-auto bg-white rounded-2xl shadow-lg px-12 py-5 text-center">
-        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-2">
-          Partners & Publication
-        </h2>
-        <p class="text-gray-500">
-          Conference proceedings and journal publication opportunities
-        </p>
-        <div class="w-28 h-1 bg-yellow-500 mx-auto rounded-full"></div>
-      </div>
+       
     </div>
   </section>
 
   <!-- CONTENT -->
-  <section class="py-20">
+  <section class="py-15">
     <div class="max-w-7xl mx-auto px-6 space-y-20">
       <!-- CHIEF PATRONS -->
       <div class="fade-section">
@@ -266,7 +277,7 @@
             </div>
 
             <h3 class="member-name">Ar. Rahul Singhi</h3>
-            <p class="member-role">Director</p>
+            <p class="member-role">Managing Director</p>
             <p class="member-org">Poornima University</p>
           </div>
 
@@ -277,7 +288,7 @@
       <div class="fade-section">
         <h2 class="section-title"> GENERAL CHAIRS </h2>
 
-        <div class="committee-grid">
+        <div class="committee-grid general-chairs-grid">
           <div class="committee-card">
             <div class="image-container">
               <img src="assets/images/manoj-gupta.png" alt="Dr. Manoj Gupta">
@@ -298,7 +309,7 @@
             <div class="member-org">SKGI</div>
           </div>
 
-          <div class="committee-card">
+          <div class="committee-card issam-naqa-card">
             <div class="image-container">
               <img src="assets/images/issam-naqa.png" alt="Dr. Issam El Naqa">
             </div>
@@ -308,7 +319,7 @@
             <div class="member-org">Moffitt Cancer Center, Tampa, Florida, USA</div>
           </div>
 
-          <div class="committee-card">
+          <div class="committee-card john-damilakis-card">
             <div class="image-container">
               <img src="assets/images/john-damilakis.png" alt="Dr. John Damilakis">
             </div>
@@ -327,6 +338,28 @@
         <div class="committee-grid">
           
            
+            
+
+          <!-- <div class="committee-card">
+            <div class="image-container">
+              <img src="assets/images/devendra-somvanshi.png" alt="Dr. Devendra Somvanshi">
+            </div>
+
+            <div class="member-name">Dr. Devendra Somvanshi</div>
+            <div class="member-role">Registrar</div>
+            <div class="member-org">Poornima University</div>
+          </div> -->
+
+          <div class="committee-card">
+            <div class="image-container">
+              <img src="assets/images/shikha-sharma.png" alt="Dr. Shikha Sharma">
+            </div>
+
+            <div class="member-name">Dr. Shikha Sharma</div>
+            <div class="member-role">Dean, FCE</div>
+            <div class="member-org">Poornima University</div>
+          </div>
+
           <div class="committee-card">
             <div class="image-container">
               <img src="assets/images/tarun-mishra.jpeg" alt="Dr. Tarun Mishra">
@@ -337,24 +370,24 @@
             <div class="member-org">Poornima University</div>
           </div>
 
-          <div class="committee-card">
-            <div class="image-container">
-              <img src="assets/images/devendra-somvanshi.png" alt="Dr. Devendra Somvanshi">
-            </div>
-
-            <div class="member-name">Dr. Devendra Somvanshi</div>
-            <div class="member-role">Registrar</div>
-            <div class="member-org">Poornima University</div>
+           <div class="committee-card">
+          <div class="image-container">
+            <img  src="assets/images/deepika-saxena.jpeg" alt="Dr. Deepika Saxena">
           </div>
-          <div class="committee-card">
-            <div class="image-container">
-              <img src="assets/images/shikha-sharma.png" alt="Dr. Shikha Sharma">
-            </div>
+          <div class="member-name">Dr. Deepika Saxena</div>
+          <div class="member-role">Associate Professor, HOD (MCA) </div>
+          <div class="member-org">Poornima University</div>
+        </div>
 
-            <div class="member-name">Dr. Shikha Sharma</div>
-            <div class="member-role">Dean, FCE</div>
-            <div class="member-org">Poornima University</div>
+        <div class="committee-card">
+          <div class="image-container">
+            <img  src="assets/images/Savita Shiwani.jpeg" alt="Dr. Savita Shiwani">
           </div>
+          <div class="member-name">Dr.avita Shiwani</div>
+          <div class="member-role">HOD BCA Higher </div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
         </div>
       </div>
     </div>
@@ -414,10 +447,91 @@
           <div class="member-name">Dr. Manju Lata Joshi</div>
           <div class="member-role">Professor</div>
           <div class="member-org">Poornima University</div>
+        </div>     
+      </div>
+    </div>
+
+    <div class="fade-section">
+      <h2 class="section-title">ADMIN SUPPORT COMMITTEE</h2>
+
+      <div class="committee-grid">
+
+         <div class="committee-card">
+            <div class="image-container">
+              <img src="assets/images/devendra-somvanshi.png" alt="Dr. Devendra Somvanshi">
+            </div>
+            <div class="member-name">Dr. Devendra Somvanshi</div>
+            <div class="member-role">Registrar</div>
+            <div class="member-org">Poornima University</div>
+          </div> 
+
+          <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/Ashwin lata.jpeg" alt="Dr. Ashwin Lata">
+          </div>
+
+          <div class="member-name">Dr. Ashwin Lata</div>
+          <div class="member-role">Director, Administration</div>
+          <div class="member-org">Poornima University</div>
         </div>
 
+           <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/Mayank Sharma.jpeg" alt="Dr. Mayank Sharma">
+          </div>
 
-     
+          <div class="member-name">Dr. Mayank Sharma</div>
+          <div class="member-role">Associate Dean - IQAC</div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
+         
+
+        <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/rakesh-gupta.png" alt="Dr. Rakesh Kumar Gupta">
+          </div>
+
+          <div class="member-name">Dr. Rakesh Kumar Gupta</div>
+          <div class="member-role">Dean Student Welfare</div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
+        
+
+        <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/naval-jain.png" alt="Dr. Naval Kishor Jain">
+          </div>
+
+          <div class="member-name">Dr. Naval Kishor Jain</div>
+          <div class="member-role">COE</div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
+         <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/Swati Gokhru.jpeg" alt="Dr. Swati Gokhru">
+          </div>
+          <div class="member-name">Dr. Swati Gokhru</div>
+          <div class="member-role">Dean International Relations</div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
+        
+
+    
+        <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/anmol-chaturvedi.png" alt="Dr. Anmol Chaturvedi">
+          </div>
+          <div class="member-name">Dr. Anmol Chaturvedi</div>
+          <div class="member-role">Assistant Registrar</div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
+       
+
       </div>
     </div>
 
@@ -427,9 +541,9 @@
 
     
 
-    <!--CONFERENCE ORGANIZING SECRETARIES-->
+    <!--CONFERENCE ORGANIZING COMMITTIEE-->
     <div class="fade-section">
-      <h2 class="section-title">CONFERENCE ORGANIZING SECRETARIES</h2>
+      <h2 class="section-title"> ORGANIZING COMMITTEE</h2>
 
       <div class="committee-grid">
 
@@ -476,6 +590,27 @@
           <div class="member-org">Poornima University</div>
         </div>
 
+        
+         
+    
+        <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/kavita-lal.jpeg" alt="Ms. Kavita Lal">
+          </div>
+          <div class="member-name">Ms. Kavita Lal</div>
+          <div class="member-role">Assistant Professor, HOD (BCA) </div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
+        <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/manali-parek.jpeg" alt="Dr. Manali Parek">
+          </div>
+          <div class="member-name">Dr. Manali Parek</div>
+          <div class="member-role">Associate Professor, DY HEAD (BCA Higher) </div>
+          <div class="member-org">Poornima University</div>
+        </div>
+
         <div class="committee-card">
           <div class="image-container">
             <img src="assets/images/cs-lamba.png" alt="Dr. CS Lamba">
@@ -515,12 +650,6 @@
 
         <!-- 4 -->
         
-
-       
-
-       
-        
-
         <div class="committee-card">
           <div class="image-container">
             <img src="assets/images/sumit-kapoor.png" alt="Dr. Sumit Kapoor">
@@ -530,7 +659,16 @@
           <div class="member-role">HOD </div>
           <div class="member-org">Poornima University</div>
         </div>
+         
+        <div class="committee-card">
+          <div class="image-container">
+            <img src="assets/images/vishnu-sharma.png" alt="Dr. Vishnu Sharma">
+          </div>
 
+          <div class="member-name">Dr. Vishnu Sharma</div>
+          <div class="member-role">Professor</div>
+          <div class="member-org">Poornima University</div>
+        </div>
        
 
         <div class="committee-card">
@@ -556,101 +694,6 @@
       </div>
     </div>
 
-    <!--ORGANIZING COMMITTEE & SUPPORT-->
-    <div class="fade-section">
-      <h2 class="section-title">LOCAL ORGANIZING & SUPPORT COMMITTEE CHAIR</h2>
-
-      <div class="committee-grid">
-
-        
-
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/rakesh-gupta.png" alt="Dr. Rakesh Kumar Gupta">
-          </div>
-
-          <div class="member-name">Dr. Rakesh Kumar Gupta</div>
-          <div class="member-role">Dean Student Welfare</div>
-          <div class="member-org">Poornima University</div>
-        </div>
-
-        
-
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/naval-jain.png" alt="Dr. Naval Kishor Jain">
-          </div>
-
-          <div class="member-name">Dr. Naval Kishor Jain</div>
-          <div class="member-role">COE</div>
-          <div class="member-org">Poornima University</div>
-        </div>
-
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/vishnu-sharma.png" alt="Dr. Vishnu Sharma">
-          </div>
-
-          <div class="member-name">Dr. Vishnu Sharma</div>
-          <div class="member-role">Professor</div>
-          <div class="member-org">Poornima University</div>
-        </div>
-
-    
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/anmol-chaturvedi.png" alt="Dr. Anmol Chaturvedi">
-          </div>
-          <div class="member-name">Dr. Anmol Chaturvedi</div>
-          <div class="member-role">Assistant Registrar</div>
-          <div class="member-org">Poornima University</div>
-        </div>
-
-        <div class="committee-card">
-          <div class="image-container">
-            <img  src="assets/images/deepika-saxena.jpeg" alt="Dr. Deepika Saxena">
-          </div>
-          <div class="member-name">Dr. Deepika Saxena</div>
-          <div class="member-role">Associate Professor, HOD (MCA) </div>
-          <div class="member-org">Poornima University</div>
-        </div>
-         
-    
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/kavita-lal.jpeg" alt="Ms. Kavita Lal">
-          </div>
-          <div class="member-name">Ms. Kavita Lal</div>
-          <div class="member-role">Assistant Professor, HOD (BCA) </div>
-          <div class="member-org">Poornima University</div>
-        </div>
-
-        
-
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/sunil-kushwaha.png" alt="Mr. Sunil Kushwaha">
-          </div>
-          <div class="member-name">Mr. Sunil Kushwaha</div>
-          <div class="member-role">Assistant Professor, DY HEAD (BCA 1st Year) </div>
-          <div class="member-org">Poornima University</div>
-        </div>
-
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/manali-parek.jpeg" alt="Dr. Manali Parek">
-          </div>
-          <div class="member-name">Dr. Manali Parek</div>
-          <div class="member-role">Associate Professor, DY HEAD (BCA Higher) </div>
-          <div class="member-org">Poornima University</div>
-        </div>
-
-      </div>
-    </div>
-
-  
-
-   
     </div> 
 
     <!-- REVIEW COMMITTEE -->
@@ -867,14 +910,7 @@ Editor Springer</div>
           <div class="member-org">Poornima University</div>
         </div>
 
-        <div class="committee-card">
-          <div class="image-container">
-            <img src="assets/images/Swati Gokhru.jpeg" alt="Dr. Swati Gokhru">
-          </div>
-          <div class="member-name">Dr. Swati Gokhru</div>
-          <div class="member-role">Dean International Relations</div>
-          <div class="member-org">Poornima University</div>
-        </div>
+       
 
        
 
